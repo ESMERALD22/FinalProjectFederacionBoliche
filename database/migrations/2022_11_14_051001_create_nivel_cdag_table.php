@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('nivel_cdag', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('nivelCDAG');
+            $table->string('nivelCDAG',50);
                       $table->timestamps();
         });
     }

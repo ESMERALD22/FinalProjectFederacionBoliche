@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('factores_reporte', function (Blueprint $table) {
-            $table->foreign('idFactorEmocionalSensorial')->references('id')->on('factor_emocional_sensorial')->onDelete('cascade');
+            $table->foreign('idFactorEmocionalSensorial')->references('id')->on('factor_emocional_sensorial');
             
         });
     }
