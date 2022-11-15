@@ -1,10 +1,9 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-@section('template_title')
-    Horario Atencion Centro Deportivo
-@endsection
+@section('title', 'Dashboard')
+@section('content_header')
 
-@section('content')
+@section('content_header') 
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -13,11 +12,11 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Horario Atencion Centro Deportivo') }}
+                                {{ __('Horario Atencion Cd') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('horario-atencion-centro-deportivos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('horario-atencion-cds.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -45,19 +44,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($horarioAtencionCentroDeportivos as $horarioAtencionCentroDeportivo)
+                                    @foreach ($horarioAtencionCds as $horarioAtencionCd)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $horarioAtencionCentroDeportivo->idCentroDeportivo }}</td>
-											<td>{{ $horarioAtencionCentroDeportivo->dia }}</td>
-											<td>{{ $horarioAtencionCentroDeportivo->horaApertura }}</td>
-											<td>{{ $horarioAtencionCentroDeportivo->horaCierre }}</td>
+											<td>{{ $horarioAtencionCd->idCentroDeportivo }}</td>
+											<td>{{ $horarioAtencionCd->dia }}</td>
+											<td>{{ $horarioAtencionCd->horaApertura }}</td>
+											<td>{{ $horarioAtencionCd->horaCierre }}</td>
 
                                             <td>
-                                                <form action="{{ route('horario-atencion-centro-deportivos.destroy',$horarioAtencionCentroDeportivo->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('horario-atencion-centro-deportivos.show',$horarioAtencionCentroDeportivo->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('horario-atencion-centro-deportivos.edit',$horarioAtencionCentroDeportivo->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                <form action="{{ route('horario-atencion-cds.destroy',$horarioAtencionCd->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('horario-atencion-cds.show',$horarioAtencionCd->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('horario-atencion-cds.edit',$horarioAtencionCd->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
@@ -70,8 +69,17 @@
                         </div>
                     </div>
                 </div>
-                {!! $horarioAtencionCentroDeportivos->links() !!}
+                {!! $horarioAtencionCds->links() !!}
             </div>
         </div>
     </div>
-@endsection
+    @stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+

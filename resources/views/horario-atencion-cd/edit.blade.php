@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 @section('content_header')
 
-@section('content_header')  
+@section('content_header')   
     <section class="content container-fluid">
         <div class="">
             <div class="col-md-12">
@@ -12,14 +12,14 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Contrato</span>
+                        <span class="card-title">Update Horario Atencion Cd</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('contratos.update', $contrato->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('horario-atencion-cds.update', $horarioAtencionCd->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
-                            @include('contrato.form')
+                            @include('horario-atencion-cd.form')
 
                         </form>
                     </div>
@@ -36,3 +36,4 @@
 @section('js')
     <script> console.log('Hi!'); </script>
 @stop
+
