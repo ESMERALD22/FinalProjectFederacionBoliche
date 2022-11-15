@@ -2,6 +2,12 @@
 
 use App\Http\Controllers\DepartamentoController;
 use App\Http\Controllers\MunicipioController;
+use App\Http\Controllers\AnuncioController;
+use App\Http\Controllers\CategoriumController;
+use App\Http\Controllers\TipoAtletumController;
+use App\Http\Controllers\LineaDesarrolloController;
+use App\Http\Controllers\PrtController;
+use App\Http\Controllers\AdministradorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,4 +37,10 @@ Route::middleware([
 
 Route::resource('departamentos', DepartamentoController::class);
 Route::resource('municipios', MunicipioController::class);
+Route::resource('anuncio', AnuncioController::class);
+Route::resource('categoria', CategoriumController::class);
+Route::resource('tipoAtleta', TipoAtletumController::class);
+Route::resource('linea-desarrollos', LineaDesarrolloController::class);
+Route::resource('prt', PrtController::class);
+Route::resource('administradors', AdministradorController::class);
 
