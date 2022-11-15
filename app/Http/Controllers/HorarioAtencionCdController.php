@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\HorarioAtencionCd;
+use App\Models\CentroDeportivo;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,8 @@ class HorarioAtencionCdController extends Controller
     public function create()
     {
         $horarioAtencionCd = new HorarioAtencionCd();
-        return view('horario-atencion-cd.create', compact('horarioAtencionCd'));
+        $centros= CentroDeportivo::pluck('nombreCentroDeportivo', 'id');
+        return view('horario-atencion-cd.create', compact('horarioAtencionCd','centros'));
     }
 
     /**
@@ -73,8 +75,8 @@ class HorarioAtencionCdController extends Controller
     public function edit($id)
     {
         $horarioAtencionCd = HorarioAtencionCd::find($id);
-
-        return view('horario-atencion-cd.edit', compact('horarioAtencionCd'));
+        $centros= CentroDeportivo::pluck('nombreCentroDeportivo', 'id');
+        return view('horario-atencion-cd.edit', compact('horarioAtencionCd','centros'));
     }
 
     /**

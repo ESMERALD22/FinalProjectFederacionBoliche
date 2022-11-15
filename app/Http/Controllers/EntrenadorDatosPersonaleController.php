@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\EntrenadorDatosPersonale;
+use App\Models\Municipio;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,8 @@ class EntrenadorDatosPersonaleController extends Controller
     public function create()
     {
         $entrenadorDatosPersonale = new EntrenadorDatosPersonale();
-        return view('entrenador-datos-personale.create', compact('entrenadorDatosPersonale'));
+        $municipios = Municipio::pluck('municipio','id');
+        return view('entrenador-datos-personale.create', compact('entrenadorDatosPersonale','municipios'));
     }
 
     /**
@@ -73,8 +75,8 @@ class EntrenadorDatosPersonaleController extends Controller
     public function edit($id)
     {
         $entrenadorDatosPersonale = EntrenadorDatosPersonale::find($id);
-
-        return view('entrenador-datos-personale.edit', compact('entrenadorDatosPersonale'));
+        $municipios = Municipio::pluck('municipio','id');
+        return view('entrenador-datos-personale.edit', compact('entrenadorDatosPersonale','municipios'));
     }
 
     /**

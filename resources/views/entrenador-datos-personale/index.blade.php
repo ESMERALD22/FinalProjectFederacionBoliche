@@ -45,7 +45,7 @@
 										<th>Telefonodecasa</th>
 										<th>Celular</th>
 										<th>Genero</th>
-										<th>Idmunicipio</th>
+										<th>Municipio</th>
 										<th>Direccion</th>
 
                                         <th></th>
@@ -66,7 +66,7 @@
 											<td>{{ $entrenadorDatosPersonale->telefonodecasa }}</td>
 											<td>{{ $entrenadorDatosPersonale->celular }}</td>
 											<td>{{ $entrenadorDatosPersonale->genero }}</td>
-											<td>{{ $entrenadorDatosPersonale->idMunicipio }}</td>
+											<td>{{ $entrenadorDatosPersonale->municipio->municipio }}</td>
 											<td>{{ $entrenadorDatosPersonale->direccion }}</td>
 
                                             <td>

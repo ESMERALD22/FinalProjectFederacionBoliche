@@ -3,7 +3,7 @@
         
         <div class="form-group">
             {{ Form::label('idCentroDeportivo') }}
-            {{ Form::text('idCentroDeportivo', $horarioAtencionCd->idCentroDeportivo, ['class' => 'form-control' . ($errors->has('idCentroDeportivo') ? ' is-invalid' : ''), 'placeholder' => 'Idcentrodeportivo']) }}
+            {{ Form::select('idCentroDeportivo', $centros ,$horarioAtencionCd->idCentroDeportivo, ['class' => 'form-control' . ($errors->has('idCentroDeportivo') ? ' is-invalid' : ''), 'placeholder' => 'Idcentrodeportivo']) }}
             {!! $errors->first('idCentroDeportivo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

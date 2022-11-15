@@ -48,7 +48,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $horarioAtencionCd->idCentroDeportivo }}</td>
+											<td>{{ $horarioAtencionCd->centro->nombreCentroDeportivo }}</td>
 											<td>{{ $horarioAtencionCd->dia }}</td>
 											<td>{{ $horarioAtencionCd->horaApertura }}</td>
 											<td>{{ $horarioAtencionCd->horaCierre }}</td>
