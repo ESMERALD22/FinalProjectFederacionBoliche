@@ -19,7 +19,6 @@ use App\Http\Controllers\EntrenadorDatosPersonaleController;
 use App\Http\Controllers\CentroDeportivoController;
 use App\Http\Controllers\HorarioAtencionCdController;
 use App\Http\Controllers\EntrenadorCentroDeportivoController;
-
 use App\Http\Controllers\AnuncioController;
 use App\Http\Controllers\CategoriumController;
 use App\Http\Controllers\TipoAtletumController;
@@ -65,6 +64,10 @@ Route::resource('centro-deportivos',CentroDeportivoController::class);
 Route::resource('horario-atencion-cds',HorarioAtencionCdController::class);
 Route::resource('entrenador-centro-deportivos',EntrenadorCentroDeportivoController::class);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('anuncio', AnuncioController::class);
 Route::resource('categoria', CategoriumController::class);
 Route::resource('tipoAtleta', TipoAtletumController::class);
