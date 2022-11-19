@@ -23,12 +23,12 @@
         </div>
         <div class="form-group">
             {{ Form::label('idFADN') }}
-            {{ Form::text('idFADN', $centroDeportivo->idFADN, ['class' => 'form-control' . ($errors->has('idFADN') ? ' is-invalid' : ''), 'placeholder' => 'Idfadn']) }}
+            {{ Form::select('idFADN', $fadns ,$centroDeportivo->idFADN, ['class' => 'form-control' . ($errors->has('idFADN') ? ' is-invalid' : ''), 'placeholder' => 'Idfadn']) }}
             {!! $errors->first('idFADN', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('idInstitucion') }}
-            {{ Form::text('idInstitucion', $centroDeportivo->idInstitucion, ['class' => 'form-control' . ($errors->has('idInstitucion') ? ' is-invalid' : ''), 'placeholder' => 'Idinstitucion']) }}
+            {{ Form::select('idInstitucion', $instituciones ,$centroDeportivo->idInstitucion, ['class' => 'form-control' . ($errors->has('idInstitucion') ? ' is-invalid' : ''), 'placeholder' => 'Idinstitucion']) }}
             {!! $errors->first('idInstitucion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -38,7 +38,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('idMunicipio') }}
-            {{ Form::text('idMunicipio', $centroDeportivo->idMunicipio, ['class' => 'form-control' . ($errors->has('idMunicipio') ? ' is-invalid' : ''), 'placeholder' => 'Idmunicipio']) }}
+            {{ Form::select('idMunicipio', $municipios ,$centroDeportivo->idMunicipio, ['class' => 'form-control' . ($errors->has('idMunicipio') ? ' is-invalid' : ''), 'placeholder' => 'Idmunicipio']) }}
             {!! $errors->first('idMunicipio', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

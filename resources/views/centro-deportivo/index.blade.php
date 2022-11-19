@@ -1,10 +1,9 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-@section('template_title')
-    Centro Deportivo
-@endsection
+@section('title', 'Dashboard')
+@section('content_header')
 
-@section('content')
+@section('content_header') 
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -57,10 +56,10 @@
 											<td>{{ $centroDeportivo->direccion }}</td>
 											<td>{{ $centroDeportivo->implementacion }}</td>
 											<td>{{ $centroDeportivo->accesibilidad }}</td>
-											<td>{{ $centroDeportivo->idFADN }}</td>
-											<td>{{ $centroDeportivo->idInstitucion }}</td>
+											<td>{{ $centroDeportivo->fadn->nombreFADN }}</td>
+											<td>{{ $centroDeportivo->institucione->tipoInstitucion }}</td>
 											<td>{{ $centroDeportivo->espacioFisico }}</td>
-											<td>{{ $centroDeportivo->idMunicipio }}</td>
+											<td>{{ $centroDeportivo->municipio->municipio }}</td>
 
                                             <td>
                                                 <form action="{{ route('centro-deportivos.destroy',$centroDeportivo->id) }}" method="POST">
@@ -82,4 +81,13 @@
             </div>
         </div>
     </div>
-@endsection
+    @stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+

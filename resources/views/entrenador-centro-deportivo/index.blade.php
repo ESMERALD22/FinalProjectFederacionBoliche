@@ -1,10 +1,9 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-@section('template_title')
-    Entrenador Centro Deportivo
-@endsection
+@section('title', 'Dashboard')
+@section('content_header')
 
-@section('content')
+@section('content_header')  
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -55,16 +54,16 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $entrenadorCentroDeportivo->idEntrenador }}</td>
+											<td>{{ $entrenadorCentroDeportivo->entrenadore->nombre1 }}</td>
 											<td>{{ $entrenadorCentroDeportivo->foto }}</td>
 											<td>{{ $entrenadorCentroDeportivo->correo }}</td>
 											<td>{{ $entrenadorCentroDeportivo->nivelAcademico }}</td>
 											<td>{{ $entrenadorCentroDeportivo->añosExperiencia }}</td>
-											<td>{{ $entrenadorCentroDeportivo->idFADN }}</td>
-											<td>{{ $entrenadorCentroDeportivo->idNivelFADN }}</td>
-											<td>{{ $entrenadorCentroDeportivo->idCentroDeportivo }}</td>
-											<td>{{ $entrenadorCentroDeportivo->idNivelCDAG }}</td>
-											<td>{{ $entrenadorCentroDeportivo->idContrato }}</td>
+											<td>{{ $entrenadorCentroDeportivo->fadn->nombreFADN }}</td>
+											<td>{{ $entrenadorCentroDeportivo->nivelfadn->nivelFADN }}</td>
+											<td>{{ $entrenadorCentroDeportivo->centrodeportivo->nombreCentroDeportivo }}</td>
+											<td>{{ $entrenadorCentroDeportivo->nivelcdag->nivelCDAG }}</td>
+											<td>{{ $entrenadorCentroDeportivo->contrato->nombreContrato }}</td>
 
                                             <td>
                                                 <form action="{{ route('entrenador-centro-deportivos.destroy',$entrenadorCentroDeportivo->id) }}" method="POST">
@@ -86,4 +85,13 @@
             </div>
         </div>
     </div>
-@endsection
+    @stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+

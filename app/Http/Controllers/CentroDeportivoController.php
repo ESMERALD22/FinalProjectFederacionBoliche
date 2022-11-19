@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\CentroDeportivo;
+use App\Models\Fadn;
+use App\Models\Institucion;
+use App\Models\Municipio;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +35,10 @@ class CentroDeportivoController extends Controller
     public function create()
     {
         $centroDeportivo = new CentroDeportivo();
-        return view('centro-deportivo.create', compact('centroDeportivo'));
+        $fadns = Fadn::pluck('nombreFADN','id');
+        $instituciones = Institucion::pluck('tipoInstitucion','id');
+        $municipios = Municipio::pluck('municipio','id');
+        return view('centro-deportivo.create', compact('centroDeportivo','fadns','instituciones','municipios'));
     }
 
     /**
@@ -73,8 +79,10 @@ class CentroDeportivoController extends Controller
     public function edit($id)
     {
         $centroDeportivo = CentroDeportivo::find($id);
-
-        return view('centro-deportivo.edit', compact('centroDeportivo'));
+        $fadns = Fadn::pluck('nombreFADN','id');
+        $instituciones = Institucion::pluck('tipoInstitucion','id');
+        $municipios = Municipio::pluck('municipio','id');
+        return view('centro-deportivo.edit', compact('centroDeportivo','fadns','instituciones','municipios'));
     }
 
     /**

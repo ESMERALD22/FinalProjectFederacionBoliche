@@ -1,20 +1,19 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-@section('template_title')
-    {{ $horarioAtencionCentroDeportivo->name ?? 'Show Horario Atencion Centro Deportivo' }}
-@endsection
+@section('title', 'Dashboard')
+@section('content_header')
 
-@section('content')
+@section('content_header')
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Horario Atencion Centro Deportivo</span>
+                            <span class="card-title">Show Horario Atencion Cd</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('horario-atencion-centro-deportivos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('horario-atencion-cds.index') }}"> Back</a>
                         </div>
                     </div>
 
@@ -22,19 +21,19 @@
                         
                         <div class="form-group">
                             <strong>Idcentrodeportivo:</strong>
-                            {{ $horarioAtencionCentroDeportivo->idCentroDeportivo }}
+                            {{ $horarioAtencionCd->idCentroDeportivo }}
                         </div>
                         <div class="form-group">
                             <strong>Dia:</strong>
-                            {{ $horarioAtencionCentroDeportivo->dia }}
+                            {{ $horarioAtencionCd->dia }}
                         </div>
                         <div class="form-group">
                             <strong>Horaapertura:</strong>
-                            {{ $horarioAtencionCentroDeportivo->horaApertura }}
+                            {{ $horarioAtencionCd->horaApertura }}
                         </div>
                         <div class="form-group">
                             <strong>Horacierre:</strong>
-                            {{ $horarioAtencionCentroDeportivo->horaCierre }}
+                            {{ $horarioAtencionCd->horaCierre }}
                         </div>
 
                     </div>
@@ -42,4 +41,13 @@
             </div>
         </div>
     </section>
-@endsection
+    @stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+

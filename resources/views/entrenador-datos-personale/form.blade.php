@@ -33,7 +33,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('fechaNaciemiento') }}
-            {{ Form::text('fechaNaciemiento', $entrenadorDatosPersonale->fechaNaciemiento, ['class' => 'form-control' . ($errors->has('fechaNaciemiento') ? ' is-invalid' : ''), 'placeholder' => 'Fechanaciemiento']) }}
+            {{ Form::date('fechaNaciemiento', $entrenadorDatosPersonale->fechaNaciemiento, ['class' => 'form-control' . ($errors->has('fechaNaciemiento') ? ' is-invalid' : ''), 'placeholder' => 'Fechanaciemiento']) }}
             {!! $errors->first('fechaNaciemiento', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -53,7 +53,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('idMunicipio') }}
-            {{ Form::text('idMunicipio', $entrenadorDatosPersonale->idMunicipio, ['class' => 'form-control' . ($errors->has('idMunicipio') ? ' is-invalid' : ''), 'placeholder' => 'Idmunicipio']) }}
+            {{ Form::select('idMunicipio', $municipios ,$entrenadorDatosPersonale->idMunicipio, ['class' => 'form-control' . ($errors->has('idMunicipio') ? ' is-invalid' : ''), 'placeholder' => 'Idmunicipio']) }}
             {!! $errors->first('idMunicipio', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

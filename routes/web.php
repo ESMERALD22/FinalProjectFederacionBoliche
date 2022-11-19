@@ -17,16 +17,14 @@ use App\Http\Controllers\NivelCdagController;
 use App\Http\Controllers\ContratoController;
 use App\Http\Controllers\EntrenadorDatosPersonaleController;
 use App\Http\Controllers\CentroDeportivoController;
-use App\Http\Controllers\HorarioAtencionCentroDeportivoController;
+use App\Http\Controllers\HorarioAtencionCdController;
 use App\Http\Controllers\EntrenadorCentroDeportivoController;
-=======
 use App\Http\Controllers\AnuncioController;
 use App\Http\Controllers\CategoriumController;
 use App\Http\Controllers\TipoAtletumController;
 use App\Http\Controllers\LineaDesarrolloController;
 use App\Http\Controllers\PrtController;
 use App\Http\Controllers\AdministradorController;
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,7 +54,6 @@ Route::middleware([
 
 Route::resource('departamentos', DepartamentoController::class);
 Route::resource('municipios', MunicipioController::class);
-
 Route::resource('institucions',InstitucionController::class);
 Route::resource('fadns',FadnController::class);
 Route::resource('nivel-fadns',NivelFadnController::class);
@@ -64,14 +61,13 @@ Route::resource('nivel-cdags',NivelCdagController::class);
 Route::resource('contratos',ContratoController::class);
 Route::resource('entrenador-datos-personales',EntrenadorDatosPersonaleController::class);
 Route::resource('centro-deportivos',CentroDeportivoController::class);
-Route::resource('horario-atencion-centro-deportivos',HorarioAtencionCentroDeportivoController::class);
+Route::resource('horario-atencion-cds',HorarioAtencionCdController::class);
 Route::resource('entrenador-centro-deportivos',EntrenadorCentroDeportivoController::class);
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-=======
 Route::resource('anuncio', AnuncioController::class);
 Route::resource('categoria', CategoriumController::class);
 Route::resource('tipoAtleta', TipoAtletumController::class);
@@ -90,3 +86,11 @@ Route::resource('factor-emocional-sensorials', FactorEmocionalSensorialControlle
 Route::resource('reporte-psicologicos', ReportePsicologicoController::class);
 Route::resource('factores-reportes', FactoresReporteController::class);
 Route::resource('tareas', TareaController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

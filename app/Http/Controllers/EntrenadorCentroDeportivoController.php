@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\EntrenadorCentroDeportivo;
+use App\Models\EntrenadorDatosPersonale;
+use App\Models\Fadn;
+use App\Models\NivelFadn;
+use App\Models\CentroDeportivo;
+use App\Models\NivelCdag;
+use App\Models\Contrato;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +38,13 @@ class EntrenadorCentroDeportivoController extends Controller
     public function create()
     {
         $entrenadorCentroDeportivo = new EntrenadorCentroDeportivo();
-        return view('entrenador-centro-deportivo.create', compact('entrenadorCentroDeportivo'));
+        $entrenadores = EntrenadorDatosPersonale::pluck('nombre1','nombre2','apellido1','apellido2','cui','id');
+        $fadns = Fadn::pluck('nombreFADN','id');
+        $nivelfadns = NivelFadn::pluck('nivelFADN','id');
+        $centrodeportivos = CentroDeportivo::pluck('nombreCentroDeportivo','id');
+        $nivelcdags = NivelCdag::pluck('nivelCDAG','id');
+        $contratos = Contrato::pluck('nombreContrato','id');
+        return view('entrenador-centro-deportivo.create', compact('entrenadorCentroDeportivo','entrenadores','fadns','nivelfadns','centrodeportivos','nivelcdags','contratos'));
     }
 
     /**
@@ -73,8 +85,13 @@ class EntrenadorCentroDeportivoController extends Controller
     public function edit($id)
     {
         $entrenadorCentroDeportivo = EntrenadorCentroDeportivo::find($id);
-
-        return view('entrenador-centro-deportivo.edit', compact('entrenadorCentroDeportivo'));
+        $entrenadores = EntrenadorDatosPersonale::pluck('nombre1','nombre2','apellido1','apellido2','cui','id');
+        $fadns = Fadn::pluck('nombreFADN','id');
+        $nivelfadns = NivelFadn::pluck('nivelFADN','id');
+        $centrodeportivos = CentroDeportivo::pluck('nombreCentroDeportivo','id');
+        $nivelcdags = NivelCdag::pluck('nivelCDAG','id');
+        $contratos = Contrato::pluck('nombreContrato','id');
+        return view('entrenador-centro-deportivo.edit', compact('entrenadorCentroDeportivo','entrenadores','fadns','nivelfadns','centrodeportivos','nivelcdags','contratos'));
     }
 
     /**
