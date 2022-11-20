@@ -2,12 +2,12 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('cui') }}
-            {{ Form::text('cui', $atletaDatosPersonale->cui, ['class' => 'form-control' . ($errors->has('cui') ? ' is-invalid' : ''), 'placeholder' => 'Cui']) }}
+            {{ Form::label('CUI') }}
+            {{ Form::number('cui', $atletaDatosPersonale->cui, ['class' => 'form-control' . ($errors->has('cui') ? ' is-invalid' : ''), 'placeholder' => 'CUI']) }}
             {!! $errors->first('cui', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('pasaporte') }}
+            {{ Form::label('PASAPORTE') }}
             {{ Form::text('pasaporte', $atletaDatosPersonale->pasaporte, ['class' => 'form-control' . ($errors->has('pasaporte') ? ' is-invalid' : ''), 'placeholder' => 'Pasaporte']) }}
             {!! $errors->first('pasaporte', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -17,83 +17,83 @@
             {!! $errors->first('NIT', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('nombre1') }}
-            {{ Form::text('nombre1', $atletaDatosPersonale->nombre1, ['class' => 'form-control' . ($errors->has('nombre1') ? ' is-invalid' : ''), 'placeholder' => 'Nombre1']) }}
+            {{ Form::label('PRIMER NOMBRE') }}
+            {{ Form::text('nombre1', $atletaDatosPersonale->nombre1, ['class' => 'form-control' . ($errors->has('nombre1') ? ' is-invalid' : ''), 'placeholder' => 'Primer Nombre']) }}
             {!! $errors->first('nombre1', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('nombre2') }}
-            {{ Form::text('nombre2', $atletaDatosPersonale->nombre2, ['class' => 'form-control' . ($errors->has('nombre2') ? ' is-invalid' : ''), 'placeholder' => 'Nombre2']) }}
+            {{ Form::label('SEGUNDO NOMBRE') }}
+            {{ Form::text('nombre2', $atletaDatosPersonale->nombre2, ['class' => 'form-control' . ($errors->has('nombre2') ? ' is-invalid' : ''), 'placeholder' => 'Segundo Nombre']) }}
             {!! $errors->first('nombre2', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('apellido1') }}
-            {{ Form::text('apellido1', $atletaDatosPersonale->apellido1, ['class' => 'form-control' . ($errors->has('apellido1') ? ' is-invalid' : ''), 'placeholder' => 'Apellido1']) }}
+            {{ Form::label('PRIMER APELLIDO') }}
+            {{ Form::text('apellido1', $atletaDatosPersonale->apellido1, ['class' => 'form-control' . ($errors->has('apellido1') ? ' is-invalid' : ''), 'placeholder' => 'Primer Apellido']) }}
             {!! $errors->first('apellido1', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('apellido2') }}
-            {{ Form::text('apellido2', $atletaDatosPersonale->apellido2, ['class' => 'form-control' . ($errors->has('apellido2') ? ' is-invalid' : ''), 'placeholder' => 'Apellido2']) }}
+            {{ Form::label('SEGUNDO APELLIDO') }}
+            {{ Form::text('apellido2', $atletaDatosPersonale->apellido2, ['class' => 'form-control' . ($errors->has('apellido2') ? ' is-invalid' : ''), 'placeholder' => 'Segundo Apellido']) }}
             {!! $errors->first('apellido2', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('apellidoDeCasada') }}
-            {{ Form::text('apellidoDeCasada', $atletaDatosPersonale->apellidoDeCasada, ['class' => 'form-control' . ($errors->has('apellidoDeCasada') ? ' is-invalid' : ''), 'placeholder' => 'Apellidodecasada']) }}
+            {{ Form::label('APELLIDO DE CASADA') }}
+            {{ Form::text('apellidoDeCasada', $atletaDatosPersonale->apellidoDeCasada, ['class' => 'form-control' . ($errors->has('apellidoDeCasada') ? ' is-invalid' : ''), 'placeholder' => 'Apellido d ecasada']) }}
             {!! $errors->first('apellidoDeCasada', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('fechaNaciemiento') }}
-            {{ Form::text('fechaNaciemiento', $atletaDatosPersonale->fechaNaciemiento, ['class' => 'form-control' . ($errors->has('fechaNaciemiento') ? ' is-invalid' : ''), 'placeholder' => 'Fechanaciemiento']) }}
+            {{ Form::label('FECHA DE NACIMIENTO') }}
+            {{ Form::date('fechaNaciemiento', $atletaDatosPersonale->fechaNaciemiento, ['class' => 'form-control' . ($errors->has('fechaNaciemiento') ? ' is-invalid' : ''), 'placeholder' => 'Fecha de nacimiento']) }}
             {!! $errors->first('fechaNaciemiento', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('celular') }}
-            {{ Form::text('celular', $atletaDatosPersonale->celular, ['class' => 'form-control' . ($errors->has('celular') ? ' is-invalid' : ''), 'placeholder' => 'Celular']) }}
+            {{ Form::label('CELULAR') }}
+            {{ Form::number('celular', $atletaDatosPersonale->celular, ['class' => 'form-control' . ($errors->has('celular') ? ' is-invalid' : ''), 'placeholder' => 'Celular']) }}
             {!! $errors->first('celular', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('telefonodecasa') }}
-            {{ Form::text('telefonodecasa', $atletaDatosPersonale->telefonodecasa, ['class' => 'form-control' . ($errors->has('telefonodecasa') ? ' is-invalid' : ''), 'placeholder' => 'Telefonodecasa']) }}
+            {{ Form::label('TELEFONO DE CASA') }}
+            {{ Form::number('telefonodecasa', $atletaDatosPersonale->telefonodecasa, ['class' => 'form-control' . ($errors->has('telefonodecasa') ? ' is-invalid' : ''), 'placeholder' => 'Telefono de casa']) }}
             {!! $errors->first('telefonodecasa', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('genero') }}
-            {{ Form::text('genero', $atletaDatosPersonale->genero, ['class' => 'form-control' . ($errors->has('genero') ? ' is-invalid' : ''), 'placeholder' => 'Genero']) }}
+            {{ Form::label('GENERO') }}
+            {{ Form::select('genero',$genero, $atletaDatosPersonale->genero, ['class' => 'form-control' . ($errors->has('genero') ? ' is-invalid' : ''), 'placeholder' => 'Genero']) }}
             {!! $errors->first('genero', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('idMunicipio') }}
-            {{ Form::text('idMunicipio', $atletaDatosPersonale->idMunicipio, ['class' => 'form-control' . ($errors->has('idMunicipio') ? ' is-invalid' : ''), 'placeholder' => 'Idmunicipio']) }}
+            {{ Form::label('MUNICIPIO DE NACIMIENTO') }}
+            {{ Form::select('idMunicipio',$municipios, $atletaDatosPersonale->idMunicipio, ['class' => 'form-control' . ($errors->has('idMunicipio') ? ' is-invalid' : ''), 'placeholder' => 'Municipio']) }}
             {!! $errors->first('idMunicipio', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('direccion') }}
+            {{ Form::label('DIRECCION') }}
             {{ Form::text('direccion', $atletaDatosPersonale->direccion, ['class' => 'form-control' . ($errors->has('direccion') ? ' is-invalid' : ''), 'placeholder' => 'Direccion']) }}
             {!! $errors->first('direccion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('correo') }}
-            {{ Form::text('correo', $atletaDatosPersonale->correo, ['class' => 'form-control' . ($errors->has('correo') ? ' is-invalid' : ''), 'placeholder' => 'Correo']) }}
+            {{ Form::label('CORREO') }}
+            {{ Form::email('correo', $atletaDatosPersonale->correo, ['class' => 'form-control' . ($errors->has('correo') ? ' is-invalid' : ''), 'placeholder' => 'Correo']) }}
             {!! $errors->first('correo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('estadoCivil') }}
-            {{ Form::text('estadoCivil', $atletaDatosPersonale->estadoCivil, ['class' => 'form-control' . ($errors->has('estadoCivil') ? ' is-invalid' : ''), 'placeholder' => 'Estadocivil']) }}
+            {{ Form::label('ESTADO CIVIL') }}
+            {{ Form::select('estadoCivil',$estadoCivil, $atletaDatosPersonale->estadoCivil, ['class' => 'form-control' . ($errors->has('estadoCivil') ? ' is-invalid' : ''), 'placeholder' => 'Estado Civil']) }}
             {!! $errors->first('estadoCivil', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('etnia') }}
+            {{ Form::label('ETNIA') }}
             {{ Form::text('etnia', $atletaDatosPersonale->etnia, ['class' => 'form-control' . ($errors->has('etnia') ? ' is-invalid' : ''), 'placeholder' => 'Etnia']) }}
             {!! $errors->first('etnia', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('escolaridad') }}
+            {{ Form::label('ESCOLARIDAD') }}
             {{ Form::text('escolaridad', $atletaDatosPersonale->escolaridad, ['class' => 'form-control' . ($errors->has('escolaridad') ? ' is-invalid' : ''), 'placeholder' => 'Escolaridad']) }}
             {!! $errors->first('escolaridad', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">REGISTRAR</button>
     </div>
 </div>

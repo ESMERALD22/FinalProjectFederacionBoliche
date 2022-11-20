@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Atleta Datos Personale</span>
+                        <span class="card-title"><b><center>REGISTRO DE DATOS PERSONALES DE ATLETA</center> </b></span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('atleta-datos-personales.store') }}"  role="form" enctype="multipart/form-data">

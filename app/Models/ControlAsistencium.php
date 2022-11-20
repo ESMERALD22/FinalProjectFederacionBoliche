@@ -21,7 +21,6 @@ use Illuminate\Database\Eloquent\Model;
  */
 class ControlAsistencium extends Model
 {
-  public $table = "control_asistencia";
     
     static $rules = [
 		'idAtleta' => 'required',
