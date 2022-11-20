@@ -4,9 +4,11 @@ use App\Http\Controllers\AlergiasAtletumController;
 use App\Http\Controllers\AtletaDatosPersonaleController;
 use App\Http\Controllers\ControlAsistenciumController;
 use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\DeptoMunController;
 use App\Http\Controllers\EncargadoController;
 use App\Http\Controllers\FactorEmocionalSensorialController;
 use App\Http\Controllers\FactoresReporteController;
+use App\Http\Controllers\Ficha1Controller;
 use App\Http\Controllers\InscripcionController;
 use App\Http\Controllers\MunicipioController;
 
@@ -25,6 +27,11 @@ use App\Http\Controllers\TipoAtletumController;
 use App\Http\Controllers\LineaDesarrolloController;
 use App\Http\Controllers\PrtController;
 use App\Http\Controllers\AdministradorController;
+use App\Http\Controllers\PsicologoController;
+use App\Http\Controllers\RelacionFAEI;
+use App\Http\Controllers\ReportePsicologicoController;
+use App\Http\Controllers\TareaController;
+use App\Http\Controllers\TipoAsistenciumController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -65,8 +72,6 @@ Route::resource('horario-atencion-cds',HorarioAtencionCdController::class);
 Route::resource('entrenador-centro-deportivos',EntrenadorCentroDeportivoController::class);
 
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('anuncio', AnuncioController::class);
 Route::resource('categoria', CategoriumController::class);
@@ -86,11 +91,8 @@ Route::resource('factor-emocional-sensorials', FactorEmocionalSensorialControlle
 Route::resource('reporte-psicologicos', ReportePsicologicoController::class);
 Route::resource('factores-reportes', FactoresReporteController::class);
 Route::resource('tareas', TareaController::class);
+Route::resource('DeptoMun', DeptoMunController::class);
+Route::resource('ficha1s', Ficha1Controller::class);
+Route::resource('relacionFAEI', RelacionFAEI::class);
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

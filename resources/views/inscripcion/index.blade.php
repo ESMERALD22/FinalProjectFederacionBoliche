@@ -16,7 +16,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('inscripcions.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('NUEVA INSCRIPCION') }}
                                 </a>
                               </div>
                         </div>
@@ -34,10 +34,10 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Idatleta</th>
+										<th>Atleta</th>
 										<th>Peso</th>
 										<th>Altura</th>
-										<th>Idencargado</th>
+										<th>Encargado</th>
 										<th>Fotografia</th>
 										<th>Fechainscripcion</th>
 										<th>Direccion</th>
