@@ -10,17 +10,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Linea Desarrollo</span>
+                            <span class="card-title">Ver Linea Desarrollo</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('linea-desarrollos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('linea-desarrollos.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Tipolineadesarrollo:</strong>
+                            <strong>Tipo linea desarrollo:</strong>
                             {{ $lineaDesarrollo->tipoLineaDesarrollo }}
                         </div>
 

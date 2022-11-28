@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Prt</span>
+                        <span class="card-title">Actulizar PRT</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('prt.update', $prt->id) }}"  role="form" enctype="multipart/form-data">

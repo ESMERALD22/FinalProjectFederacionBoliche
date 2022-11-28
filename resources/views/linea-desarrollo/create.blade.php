@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Linea Desarrollo</span>
+                        <span class="card-title">Crear Linea Desarrollo</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('linea-desarrollos.store') }}"  role="form" enctype="multipart/form-data">

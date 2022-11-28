@@ -381,6 +381,15 @@ return [
                     'url'  => '/prt',
                 ],
                 [
+
+                    'text' => 'Etapa Deportiva',
+                    'url'  => '/etapa-deportivas',
+                ],
+                [
+                    'text' => 'Asignar Atleta',
+                    'url'  => '/asignacionAtletum'
+                    ],
+                    [
                     'text' => 'Inscripciones',
                     'url'  => 'ficha1s',
                 ],

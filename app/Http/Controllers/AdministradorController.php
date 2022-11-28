@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Administrador;
 use Illuminate\Http\Request;
-
+use App\Models\Municipio;
 /**
  * Class AdministradorController
  * @package App\Http\Controllers
@@ -32,7 +32,8 @@ class AdministradorController extends Controller
     public function create()
     {
         $administrador = new Administrador();
-        return view('administrador.create', compact('administrador'));
+        $municipio = Municipio::pluck('municipio','id');
+        return view('administrador.create', compact('administrador','municipio'));
     }
 
     /**
@@ -48,7 +49,7 @@ class AdministradorController extends Controller
         $administrador = Administrador::create($request->all());
 
         return redirect()->route('administradors.index')
-            ->with('success', 'Administrador created successfully.');
+            ->with('success', 'Administrador creado.');
     }
 
     /**
@@ -73,8 +74,8 @@ class AdministradorController extends Controller
     public function edit($id)
     {
         $administrador = Administrador::find($id);
-
-        return view('administrador.edit', compact('administrador'));
+        $municipio = Municipio::pluck('municipio','id');
+        return view('administrador.edit', compact('administrador','municipio'));
     }
 
     /**
@@ -91,7 +92,7 @@ class AdministradorController extends Controller
         $administrador->update($request->all());
 
         return redirect()->route('administradors.index')
-            ->with('success', 'Administrador updated successfully');
+            ->with('success', 'Administrador actualizado');
     }
 
     /**
@@ -104,6 +105,6 @@ class AdministradorController extends Controller
         $administrador = Administrador::find($id)->delete();
 
         return redirect()->route('administradors.index')
-            ->with('success', 'Administrador deleted successfully');
+            ->with('success', 'Administrador Eliminado');
     }
 }

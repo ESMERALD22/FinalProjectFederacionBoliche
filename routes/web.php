@@ -28,6 +28,9 @@ use App\Http\Controllers\TipoAtletumController;
 use App\Http\Controllers\LineaDesarrolloController;
 use App\Http\Controllers\PrtController;
 use App\Http\Controllers\AdministradorController;
+use App\Http\Controllers\AsignacionAtletumController;
+use App\Http\Controllers\EtapaDeportivaController;
+
 use App\Http\Controllers\AtletaController;
 use App\Http\Controllers\CentroController;
 use App\Http\Controllers\EntrenadorController;
@@ -76,17 +79,22 @@ Route::resource('nivel-cdags',NivelCdagController::class);
 Route::resource('contratos',ContratoController::class);
 Route::resource('entrenador-datos-personales',EntrenadorDatosPersonaleController::class);
 Route::resource('centro-deportivos',CentroDeportivoController::class);
+
 Route::resource('horario-atencion-cds',HorarioAtencionCdController::class);
 Route::resource('entrenador-centro-deportivos',EntrenadorCentroDeportivoController::class);
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::resource('anuncio', AnuncioController::class);
 Route::resource('categoria', CategoriumController::class);
 Route::resource('tipoAtleta', TipoAtletumController::class);
 Route::resource('linea-desarrollos', LineaDesarrolloController::class);
 Route::resource('prt', PrtController::class);
 Route::resource('administradors', AdministradorController::class);
+Route::resource('asignacionAtletum', AsignacionAtletumController::class);
+Route::resource('etapa-deportivas', EtapaDeportivaController::class);
+
 
 Route::resource('tipo-asistencia', TipoAsistenciumController::class);
 Route::resource('encargados', EncargadoController::class);
