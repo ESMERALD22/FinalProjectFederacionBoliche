@@ -312,75 +312,149 @@ return [
             'can'  => 'manage-blog',
         ],
        
-        ['header' => 'Modulos'],
+        ['header' => 'Mudulos'],
         [
             'text' => 'Perfil',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'Administrador',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-
             'submenu' => [
                 [
-                    'text' => 'Empleados',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Sedes',
-                    'url'     => '#',
-                    
-                ],
-                [
-                    'text' => 'Atletas',
+                    'text' => 'Configuracion',
                     'url'  => '#',
                 ],
             ],
         ],
         [
-            'text'    => 'Atleta',
+            'text' => 'Registro de Personal(Datos Personales)',
+            'url'  => 'admin/settings',
+            'icon' => ' fas fa-fw   fa-clipboard-user',
+
+            'submenu' => [
+                [
+                    'text' => 'Entrenador',
+                    'url'  => '#',
+                ],
+                [
+                    'text'    => 'Psicologos',
+                    'url'     => '#',
+                    
+                ],
+                [
+                    'text' => 'Administrador',
+                    'url'  => '/administradors',
+                ],
+            ],
+        ],
+        [
+            'text' => 'Administracion',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+
+            'submenu' => [
+                [
+                    'text' => 'Registrar y listar FADN',
+                    'url'  => '/fadns',
+                ],
+                [
+                    'text'    => 'Registrar y listar tipo de contrato del entenador',
+                    'url'     => '#',
+                    
+                ],
+                [
+                    'text' => 'Registrar y listar nivel CDAG',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Categorias',
+                    'url'  => '/categoria',
+                ],
+                [
+                    'text' => 'Tipos de Atleta',
+                    'url'  => '/tipoAtleta',
+                ],
+                [
+                    'text' => 'Linea de desarrollo',
+                    'url'  => '/linea-desarrollos',
+                ],
+                [
+                    'text' => 'PRT',
+                    'url'  => '/prt',
+                ],
+                [
+                    'text' => 'Inscripciones',
+                    'url'  => 'ficha1s',
+                ],
+                [
+                    'text' => 'Control Asistencia',
+                    'url'  => 'control-asistencia',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Centro Deportivos',
             'icon'    => 'fas fa-fw fa-user',
             'submenu' => [
                 [
-                    'text' => 'Asistecia',
+                    'text' => 'Registar y listar centro deportivo',
                     'url'  => '#',
                 ],
                 [
-                    'text'    => 'Tareas',
+                    'text'    => 'Registrar y listar Horario de antecion',
                     'url'     => '#',
                     
                 ],
                 [
-                    'text' => 'Anuncios',
+                    'text' => 'Registrar y listar trabajaores en Centro deportivo',
                     'url'  => '#',
                 ],
             ],
         ],
 
         [
-            'text' => 'Entrenador',
+            'text' => 'Reportes',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
             'submenu' => [
                 [
                     'text' => 'Asistecia',
-                    'url'  => '#',
+                    'url'  => 'report1',
                 ],
                 [
                     'text'    => 'Atletas',
-                    'url'     => '#',
+                    'url'     => 'formAtleta',
                 ],
                 [
-                    'text' => 'Reporte',
-                    'url'  => '#',
+                    'text' => 'Entrenador',
+                    'url'  => 'formEntrenador',
+                ],
+                [
+                    'text' => 'Centro',
+                    'url'  => 'formCentro',
+                ],
+                [
+                    'text' => 'Reporte 27',
+                    'url'  => 'form27',
+                ],
+                [
+                    'text' => 'Reporte 27.2',
+                    'url'  => 'form272',
                 ],
             ],
         ],
 
         [
-            'text' => 'Psicologo',
+            'text' => 'Anuncios',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+            'submenu' => [
+                [
+                    'text' => 'Ver anuncios',
+                    'url'  => '/anuncio',
+                ],
+            ],
+        ],
+        [
+            'text' => 'Anuncios',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
             'submenu' => [

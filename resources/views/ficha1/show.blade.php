@@ -4,6 +4,7 @@
 @section('content_header')
 
 @section('content_header')
+
 <section class="content container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -18,134 +19,145 @@
                 </div>
 
                 <div class="card-body">
+                    <div class="form-group">
+                        <strong>------------------------------------------DATOS DEL ATLETA: ------------------------------------------</strong>
+                    </div>
+
+                    <strong>FOTOGRAFIA DEL ATLETA:</strong>
+                    <img src="{{ asset('uploads/atletas/'.$ficha1->fotografiaA) }}" width="70px" height="70px" alt="Image">
 
                     <div class="form-group">
-                        <strong>Cuiatleta:</strong>
+                        <strong>CUI DEL ATLETA:</strong>
                         {{ $ficha1->cuiAtleta }}
                     </div>
                     <div class="form-group">
-                        <strong>Pasaporte:</strong>
+                        <strong>NOMBRES:</strong>
+                        {{ $ficha1->nombre1A ." ". $ficha1->nombre2A ." ".  $ficha1->apellido1A ." ".  $ficha1->apellido2A }}
+                    </div>
+                    <div class="form-group">
+                        <strong>PASAPORTEe:</strong>
                         {{ $ficha1->pasaporte }}
                     </div>
                     <div class="form-group">
-                        <strong>Nit:</strong>
+                        <strong>NIT:</strong>
                         {{ $ficha1->NIT }}
                     </div>
                     <div class="form-group">
-                        <strong>Nombre1A:</strong>
-                        {{ $ficha1->nombre1A }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Nombre2A:</strong>
-                        {{ $ficha1->nombre2A }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Apellido1A:</strong>
-                        {{ $ficha1->apellido1A }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Apellido2A:</strong>
-                        {{ $ficha1->apellido2A }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Apellidodecasadaa:</strong>
+                        <strong>APELLIDO DE CASADA:</strong>
                         {{ $ficha1->apellidoDeCasadaA }}
                     </div>
                     <div class="form-group">
-                        <strong>Fechanaciemientoa:</strong>
+                        <strong>FECHA DE NACIMIENTO:</strong>
                         {{ $ficha1->fechaNaciemientoA }}
                     </div>
                     <div class="form-group">
-                        <strong>Celulara:</strong>
+                        <strong>CELULAR:</strong>
                         {{ $ficha1->celularA }}
                     </div>
                     <div class="form-group">
-                        <strong>Telefonodecasaa:</strong>
+                        <strong>TELEFONO DE CASA:</strong>
                         {{ $ficha1->telefonodecasaA }}
                     </div>
                     <div class="form-group">
-                        <strong>Generoa:</strong>
-                        {{ $ficha1->generoA }}
+                        <strong>GENERO:</strong>
+                        @if($ficha1->generoA == 0)
+                        Masculino
+                        @else
+                        Femenino
+                        @endif
                     </div>
                     <div class="form-group">
-                        <strong>Idmunicipioa:</strong>
-                        {{ $ficha1->idMunicipioA }}
+                        <strong>DEPARTAMENTO:</strong>
+                        {{ $ficha1->municipio->departamento->departamento }}
                     </div>
                     <div class="form-group">
-                        <strong>Direcciona:</strong>
+                        <strong>MUNICIPIO:</strong>
+                        {{ $ficha1->municipio->municipio }}
+                    </div>
+                    <div class="form-group">
+                        <strong>DIRECCION:</strong>
                         {{ $ficha1->direccionA }}
                     </div>
                     <div class="form-group">
-                        <strong>Correoa:</strong>
+                        <strong>CORREO:</strong>
                         {{ $ficha1->correoA }}
                     </div>
                     <div class="form-group">
-                        <strong>Estadocivila:</strong>
-                        {{ $ficha1->estadoCivilA }}
+                        <strong>ESTADO CIVIL:</strong>
+                        @if($ficha1->estadoCivilA == 0)
+                        Soltero
+                        @elseif($ficha1->estadoCivilA == 1)
+                        Casado
+                        @elseif($ficha1->estadoCivilA == 2)
+                        Divorciado
+                        @elseif($ficha1->estadoCivilA == 3)
+                        Viudo
+                        @endif
                     </div>
                     <div class="form-group">
-                        <strong>Etniaa:</strong>
+                        <strong>ETNIA:</strong>
                         {{ $ficha1->etniaA }}
                     </div>
                     <div class="form-group">
-                        <strong>Escolaridada:</strong>
+                        <strong>ESCOLARIDAD:</strong>
                         {{ $ficha1->escolaridadA }}
                     </div>
                     <div class="form-group">
-                        <strong>Fotografiaa:</strong>
-                        {{ $ficha1->fotografiaA }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Cuiencargado:</strong>
-                        {{ $ficha1->cuiEncargado }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Nombre1E:</strong>
-                        {{ $ficha1->nombre1E }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Nombre2E:</strong>
-                        {{ $ficha1->nombre2E }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Apellido1E:</strong>
-                        {{ $ficha1->apellido1E }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Apellido2E:</strong>
-                        {{ $ficha1->apellido2E }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Apellidodecasadae:</strong>
-                        {{ $ficha1->apellidoDeCasadaE }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Fechanaciemientoe:</strong>
-                        {{ $ficha1->fechaNaciemientoE }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Telefonodecasae:</strong>
-                        {{ $ficha1->telefonodecasaE }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Celulare:</strong>
-                        {{ $ficha1->celularE }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Generoe:</strong>
-                        {{ $ficha1->generoE }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Direccione:</strong>
-                        {{ $ficha1->direccionE }}
-                    </div>
-                    <div class="form-group">
-                        <strong>Pesoa:</strong>
+                        <strong>PESO:</strong>
                         {{ $ficha1->pesoA }}
                     </div>
                     <div class="form-group">
-                        <strong>Alturaa:</strong>
+                        <strong>ALTURA:</strong>
                         {{ $ficha1->alturaA }}
+                    </div>
+                    <div class="form-group">
+                        <strong>Estado:</strong>
+                        @if($ficha1->estado == 0)
+                        Sin Aprobar
+                        @else
+                        Aprobado
+                        @endif
+
+                    </div>
+                    <div class="form-group">
+                        <strong>------------------------------------------DATOS DEL ENCARGADO: ------------------------------------------</strong>
+                    </div>
+
+                    <div class="form-group">
+                        <strong>CUI ENCARGADO:</strong>
+                        {{ $ficha1->cuiEncargado }}
+                    </div>
+                    <div class="form-group">
+                        <strong>NOMBRES:</strong>
+                        {{ $ficha1->nombre1E ." ". $ficha1->nombre2E ." ".$ficha1->apellido1E ." ".$ficha1->apellido2E}}
+                    </div>
+                    <div class="form-group">
+                        <strong>APELLIDO DE CASADA:</strong>
+                        {{ $ficha1->apellidoDeCasadaE }}
+                    </div>
+                    <div class="form-group">
+                        <strong>FECHA DE NACIMIENTO:</strong>
+                        {{ $ficha1->fechaNaciemientoE }}
+                    </div>
+                    <div class="form-group">
+                        <strong>TELEFONO DE CASA:</strong>
+                        {{ $ficha1->telefonodecasaE }}
+                    </div>
+                    <div class="form-group">
+                        <strong>CELULAR:</strong>
+                        {{ $ficha1->celularE }}
+                    </div>
+                    <div class="form-group">
+                        <strong>GENERO:</strong>
+                        @if($ficha1->generoA == 0)
+                        Masculino
+                        @else
+                        Femenino
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <strong>DIRECCION:</strong>
+                        {{ $ficha1->direccionE }}
                     </div>
 
                 </div>
@@ -156,9 +168,11 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+<link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<script>
+    console.log('Hi!');
+</script>
 @stop

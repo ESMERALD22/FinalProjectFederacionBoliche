@@ -42,6 +42,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property $alturaA
  * @property $created_at
  * @property $updated_at
+ * @property $estado
  *
  * @property Municipio $municipio
  * @package App
@@ -94,7 +95,7 @@ class Ficha1 extends Model
      *
      * @var array
      */
-    protected $fillable = ['cuiAtleta','pasaporte','NIT','nombre1A','nombre2A','apellido1A','apellido2A','apellidoDeCasadaA','fechaNaciemientoA','celularA','telefonodecasaA','generoA','idMunicipioA','direccionA','correoA','estadoCivilA','etniaA','escolaridadA','fotografiaA','cuiEncargado','nombre1E','nombre2E','apellido1E','apellido2E','apellidoDeCasadaE','fechaNaciemientoE','telefonodecasaE','celularE','generoE','direccionE','pesoA','alturaA'];
+    protected $fillable = ['cuiAtleta','pasaporte','NIT','nombre1A','nombre2A','apellido1A','apellido2A','apellidoDeCasadaA','fechaNaciemientoA','celularA','telefonodecasaA','generoA','idMunicipioA','direccionA','correoA','estadoCivilA','etniaA','escolaridadA','fotografiaA','cuiEncargado','nombre1E','nombre2E','apellido1E','apellido2E','apellidoDeCasadaE','fechaNaciemientoE','telefonodecasaE','celularE','generoE','direccionE','pesoA','alturaA','estado'];
 
 
     /**

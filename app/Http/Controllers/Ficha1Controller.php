@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\FichaInscripcionExport;
 use App\Models\Ficha1;
 use App\Models\Municipio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\File;
+use Maatwebsite\Excel\Facades\Excel;
 
 /**
  * Class Ficha1Controller
@@ -35,12 +36,13 @@ class Ficha1Controller extends Controller
     public function create(Request $request)
     {
         $valor1 = $request->input("id");
-        $ficha1 = new Ficha1();
+        $municipios = DB::table('municipio')->where('idDepartamento', $valor1)->pluck('municipio', 'id');
         $genero = array("Masculino", "Femenino");
         $estadoCivil = array("Soltero", "Casado", "Divorciado", "Viudo");
-        $municipios = DB::table('municipio')->where('idDepartamento', $valor1)->pluck('municipio', 'id');
+        $estadoF = array("0");
 
-        return view('ficha1.create', compact('ficha1', 'genero', 'estadoCivil', 'municipios'));
+        $ficha1 = new Ficha1();
+        return view('ficha1.create', compact('ficha1', 'municipios', 'genero', 'estadoCivil', 'estadoF'));
     }
 
     /**
@@ -53,7 +55,6 @@ class Ficha1Controller extends Controller
     {
         request()->validate(Ficha1::$rules);
         $ficha1 = Ficha1::create($request->all());
-
         if ($request->hasfile('fotografiaA')) {
             $file = $request->file('fotografiaA');
             $extention = $file->getClientOriginalExtension();
@@ -62,9 +63,14 @@ class Ficha1Controller extends Controller
             $ficha1->fotografiaA = $filename;
             $ficha1->save();
         }
+        $unaVariable = $ficha1->id;
 
-        return redirect()->route('ficha1s.index')
-            ->with('success', 'Ficha created successfully.');
+        //creamos archivo excel ;)
+        return Excel::download(new FichaInscripcionExport($unaVariable), 'FICHA_INSCRIPCION.xlsx');
+
+
+        /*        return redirect()->route('ficha1s.index')
+            ->with('success', 'Ficha1 created successfully.');*/
     }
 
     /**
@@ -91,11 +97,8 @@ class Ficha1Controller extends Controller
     public function edit($id)
     {
         $ficha1 = Ficha1::find($id);
-        $genero = array("Masculino", "Femenino");
-        $estadoCivil = array("Soltero", "Casado", "Divorciado", "Viudo");
-     
-           return view('ficha1.edit', compact('ficha1', 'genero', 'estadoCivil'));
 
+        return view('ficha1.edit', compact('ficha1'));
     }
 
     /**
@@ -107,29 +110,13 @@ class Ficha1Controller extends Controller
      */
     public function update(Request $request, Ficha1 $ficha1)
     {
-
         request()->validate(Ficha1::$rules);
-        echo $ficha1->id;
-     /*   $ficha1->update($request->all());
 
-        if ($request->hasfile('fotografiaA')) {
-            $destination = 'uploads/atletas/' . $ficha1->fotografiaA;
-            if (File::exists($destination)) {
-                File::delete($destination);
-            }
-            $file = $request->file('fotografiaA');
-            $extention = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $extention;
-            $ficha1->fotografiaA = $filename;
-            $file->move('uploads/atletas/', $filename);
-            $ficha1->fotografiaA = $filename;
-            $ficha1->save();
-        }
+        $ficha1->update($request->all());
 
         return redirect()->route('ficha1s.index')
             ->with('success', 'Ficha1 updated successfully');
-    */
-}
+    }
 
     /**
      * @param int $id

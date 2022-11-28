@@ -1,5 +1,6 @@
 <?php
 
+use App\Exports\CentroExport;
 use App\Http\Controllers\AlergiasAtletumController;
 use App\Http\Controllers\AtletaDatosPersonaleController;
 use App\Http\Controllers\ControlAsistenciumController;
@@ -27,9 +28,16 @@ use App\Http\Controllers\TipoAtletumController;
 use App\Http\Controllers\LineaDesarrolloController;
 use App\Http\Controllers\PrtController;
 use App\Http\Controllers\AdministradorController;
+use App\Http\Controllers\AtletaController;
+use App\Http\Controllers\CentroController;
+use App\Http\Controllers\EntrenadorController;
+use App\Http\Controllers\Form272Controller;
+use App\Http\Controllers\Form27Controller;
 use App\Http\Controllers\PsicologoController;
 use App\Http\Controllers\RelacionFAEI;
+use App\Http\Controllers\ReportAsistenciaController;
 use App\Http\Controllers\ReportePsicologicoController;
+use App\Http\Controllers\ReportCAController;
 use App\Http\Controllers\TareaController;
 use App\Http\Controllers\TipoAsistenciumController;
 use Illuminate\Support\Facades\Route;
@@ -94,5 +102,18 @@ Route::resource('tareas', TareaController::class);
 Route::resource('DeptoMun', DeptoMunController::class);
 Route::resource('ficha1s', Ficha1Controller::class);
 Route::resource('relacionFAEI', RelacionFAEI::class);
+Route::resource('report', ReportAsistenciaController::class);
+Route::resource('report1', ReportCAController::class);
+Route::resource('form27', Form27Controller::class);
+Route::resource('form272', Form272Controller::class);
+Route::resource('formAtleta', AtletaController::class);
+Route::resource('formEntrenador', EntrenadorController::class);
+Route::resource('formCentro', CentroController::class);
 
 
+
+
+
+//Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

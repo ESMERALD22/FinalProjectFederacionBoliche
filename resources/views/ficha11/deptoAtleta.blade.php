@@ -12,7 +12,7 @@
 
             <div class="card card-default">
                 <div class="card-header">
-                    <span class="card-title"><b style="color:blue">
+                    <span class="card-title"><b style="color:darkblue">
                             <center>¡¡¡ BIENVENIDO !!!!</center>
                             <center>FICHA DE SOLICITUD DE INSCRIPCION PARA PERTENECER A FEDERACION DE BOLICHE</center>
                         </b></span>

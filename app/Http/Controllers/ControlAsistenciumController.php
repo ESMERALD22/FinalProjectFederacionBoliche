@@ -53,7 +53,6 @@ class ControlAsistenciumController extends Controller
         $controlAsistencium = new ControlAsistencium();
         $tiposA = TipoAsistencium::all();
         $categorias = Categorium::all();
-
         return view('control-asistencium.asistencia', compact('controlAsistencium', 'atletas', 'tiposA'));
     }
 
@@ -78,7 +77,8 @@ class ControlAsistenciumController extends Controller
         );
         return redirect()->route('control-asistencia.create')
             ->with('success', 'Asitencia de atleta registrada');
-    }
+    
+  }
 
     /**
      * Display the specified resource.
