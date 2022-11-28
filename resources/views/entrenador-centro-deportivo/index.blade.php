@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Entrenador')
 @section('content_header')
 
 @section('content_header')  
@@ -12,12 +12,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Entrenador Centro Deportivo') }}
+                                {{ __('Entrenador del centro deportivo') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('entrenador-centro-deportivos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Asignar entrenador') }}
                                 </a>
                               </div>
                         </div>
@@ -35,16 +35,16 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Identrenador</th>
+										<th>Entrenador</th>
 										<th>Foto</th>
 										<th>Correo</th>
-										<th>Nivelacademico</th>
-										<th>Añosexperiencia</th>
-										<th>Idfadn</th>
-										<th>Idnivelfadn</th>
-										<th>Idcentrodeportivo</th>
-										<th>Idnivelcdag</th>
-										<th>Idcontrato</th>
+										<th>Nivel academico</th>
+										<th>Años de experiencia</th>
+										<th>FADN</th>
+										<th>Nivel de FADN</th>
+										<th>Centro deportivo</th>
+										<th>Nivel CDAG</th>
+										<th>Contrato</th>
 
                                         <th></th>
                                     </tr>
@@ -54,7 +54,11 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $entrenadorCentroDeportivo->entrenadorDatosPersonale->nombre1 }}</td>
+											<td>{{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->nombre1 }}
+                      {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->nombre2 }}
+                                               
+                                               {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->apellido1 }} 
+                                               {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->apellido2 }}</td>
 											<td>{{ $entrenadorCentroDeportivo->foto }}</td>
 											<td>{{ $entrenadorCentroDeportivo->correo }}</td>
 											<td>{{ $entrenadorCentroDeportivo->nivelAcademico }}</td>

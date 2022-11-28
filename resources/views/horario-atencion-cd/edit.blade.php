@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Horarios de atención')
 @section('content_header')
 
 @section('content_header')   
@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Horario Atencion Cd</span>
+                        <span class="card-title">Actualizar horario de atención de centro deportivo</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('horario-atencion-cds.update', $horarioAtencionCd->id) }}"  role="form" enctype="multipart/form-data">

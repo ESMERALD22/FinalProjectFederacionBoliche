@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Horarios de atención')
 @section('content_header')
 
 @section('content_header')
@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Horario Atencion Cd</span>
+                        <span class="card-title">Agregar de horario de atencion del centro deportivo</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('horario-atencion-cds.store') }}"  role="form" enctype="multipart/form-data">

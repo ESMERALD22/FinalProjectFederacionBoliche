@@ -10,18 +10,19 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Entrenador Centro Deportivo</span>
+                            <span class="card-title">Ver asignación de entrenador</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('entrenador-centro-deportivos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('entrenador-centro-deportivos.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Identrenador:</strong>
-                            {{ $entrenadorCentroDeportivo->idEntrenador }}
+                            <strong>Entrenador:</strong>
+                            {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->nombre1 }} {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->nombre2 }}
+                                                {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->apellido1 }} {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->apellido2 }}
                         </div>
                         <div class="form-group">
                             <strong>Foto:</strong>
@@ -40,24 +41,24 @@
                             {{ $entrenadorCentroDeportivo->añosExperiencia }}
                         </div>
                         <div class="form-group">
-                            <strong>Idfadn:</strong>
-                            {{ $entrenadorCentroDeportivo->idFADN }}
+                            <strong>Fadn:</strong>
+                            {{ $entrenadorCentroDeportivo->fadn->nombreFADN }}
                         </div>
                         <div class="form-group">
-                            <strong>Idnivelfadn:</strong>
-                            {{ $entrenadorCentroDeportivo->idNivelFADN }}
+                            <strong>Nivel FADN:</strong>
+                            {{ $entrenadorCentroDeportivo->nivelfadn->nivelFADN }}
                         </div>
                         <div class="form-group">
-                            <strong>Idcentrodeportivo:</strong>
-                            {{ $entrenadorCentroDeportivo->idCentroDeportivo }}
+                            <strong>Centro deportivo:</strong>
+                            {{ $entrenadorCentroDeportivo->centrodeportivo->nombreCentroDeportivo }}
                         </div>
                         <div class="form-group">
-                            <strong>Idnivelcdag:</strong>
-                            {{ $entrenadorCentroDeportivo->idNivelCDAG }}
+                            <strong>Nivel CDAG:</strong>
+                            {{ $entrenadorCentroDeportivo->nivelcdag->nivelCDAG }}
                         </div>
                         <div class="form-group">
-                            <strong>Idcontrato:</strong>
-                            {{ $entrenadorCentroDeportivo->idContrato }}
+                            <strong>Contrato:</strong>
+                            {{ $entrenadorCentroDeportivo->contrato->nombreContrato }}
                         </div>
 
                     </div>

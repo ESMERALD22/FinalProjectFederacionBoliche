@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'FADN')
 @section('content_header')
 
 @section('content_header')
@@ -10,17 +10,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Fadn</span>
+                            <span class="card-title">Ver información FADN</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('fadns.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('fadns.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Nombrefadn:</strong>
+                            <strong>Nombre de FADN: </strong>
                             {{ $fadn->nombreFADN }}
                         </div>
 

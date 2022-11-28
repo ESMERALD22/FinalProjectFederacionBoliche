@@ -10,25 +10,25 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Centro Deportivo</span>
+                            <span class="card-title">Información del centro deportivo</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('centro-deportivos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('centro-deportivos.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Nombrecentrodeportivo:</strong>
+                            <strong>Nombre del centro deportivo:</strong>
                             {{ $centroDeportivo->nombreCentroDeportivo }}
                         </div>
                         <div class="form-group">
-                            <strong>Direccion:</strong>
+                            <strong>Dirección:</strong>
                             {{ $centroDeportivo->direccion }}
                         </div>
                         <div class="form-group">
-                            <strong>Implementacion:</strong>
+                            <strong>Implementación:</strong>
                             {{ $centroDeportivo->implementacion }}
                         </div>
                         <div class="form-group">
@@ -36,20 +36,20 @@
                             {{ $centroDeportivo->accesibilidad }}
                         </div>
                         <div class="form-group">
-                            <strong>Idfadn:</strong>
-                            {{ $centroDeportivo->idFADN }}
+                            <strong>FADN:</strong>
+                            {{ $centroDeportivo->fadn->nombreFADN }}
                         </div>
                         <div class="form-group">
-                            <strong>Idinstitucion:</strong>
-                            {{ $centroDeportivo->idInstitucion }}
+                            <strong>Institucion:</strong>
+                            {{ $centroDeportivo->institucion->tipoInstitucion }}
                         </div>
                         <div class="form-group">
-                            <strong>Espaciofisico:</strong>
+                            <strong>Espacio físico:</strong>
                             {{ $centroDeportivo->espacioFisico }}
                         </div>
                         <div class="form-group">
-                            <strong>Idmunicipio:</strong>
-                            {{ $centroDeportivo->idMunicipio }}
+                            <strong>Municipio:</strong>
+                            {{ $centroDeportivo->municipio->municipio }}
                         </div>
 
                     </div>

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'FADN')
 @section('content_header')
 
 @section('content_header')   
@@ -17,7 +17,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('fadns.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Agregar nuevo FADN') }}
                                 </a>
                               </div>
                         </div>
@@ -35,7 +35,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Nombrefadn</th>
+										<th>Nombre de FADN</th>
 
                                         <th></th>
                                     </tr>
@@ -49,11 +49,11 @@
 
                                             <td>
                                                 <form action="{{ route('fadns.destroy',$fadn->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('fadns.show',$fadn->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('fadns.edit',$fadn->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('fadns.show',$fadn->id) }}"><i class="fa fa-fw fa-eye"></i> Ver </a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('fadns.edit',$fadn->id) }}"><i class="fa fa-fw fa-edit"></i> Editar </a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>
