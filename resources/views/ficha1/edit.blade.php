@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-@section('template_title')
-    Update Horario Atencion Centro Deportivo
-@endsection
+@section('title', 'Dashboard')
+@section('content_header')
 
-@section('content')
+@section('content_header')    
+
     <section class="content container-fluid">
         <div class="">
             <div class="col-md-12">
@@ -13,14 +13,14 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Horario Atencion Centro Deportivo</span>
+                        <span class="card-title">Update Ficha1</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('horario-atencion-centro-deportivos.update', $horarioAtencionCentroDeportivo->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('ficha1s.update', $ficha1->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
-                            @include('horario-atencion-centro-deportivo.form')
+                            @include('ficha1.form3')
 
                         </form>
                     </div>
@@ -28,4 +28,12 @@
             </div>
         </div>
     </section>
-@endsection
+    @stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

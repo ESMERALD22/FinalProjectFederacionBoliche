@@ -3,22 +3,22 @@
         
         <div class="form-group">
             {{ Form::label('idCentroDeportivo') }}
-            {{ Form::text('idCentroDeportivo', $horarioAtencionCentroDeportivo->idCentroDeportivo, ['class' => 'form-control' . ($errors->has('idCentroDeportivo') ? ' is-invalid' : ''), 'placeholder' => 'Idcentrodeportivo']) }}
+            {{ Form::select('idCentroDeportivo', $centros ,$horarioAtencionCd->idCentroDeportivo, ['class' => 'form-control' . ($errors->has('idCentroDeportivo') ? ' is-invalid' : ''), 'placeholder' => 'Idcentrodeportivo']) }}
             {!! $errors->first('idCentroDeportivo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('dia') }}
-            {{ Form::text('dia', $horarioAtencionCentroDeportivo->dia, ['class' => 'form-control' . ($errors->has('dia') ? ' is-invalid' : ''), 'placeholder' => 'Dia']) }}
+            {{ Form::text('dia', $horarioAtencionCd->dia, ['class' => 'form-control' . ($errors->has('dia') ? ' is-invalid' : ''), 'placeholder' => 'Dia']) }}
             {!! $errors->first('dia', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('horaApertura') }}
-            {{ Form::text('horaApertura', $horarioAtencionCentroDeportivo->horaApertura, ['class' => 'form-control' . ($errors->has('horaApertura') ? ' is-invalid' : ''), 'placeholder' => 'Horaapertura']) }}
+            {{ Form::text('horaApertura', $horarioAtencionCd->horaApertura, ['class' => 'form-control' . ($errors->has('horaApertura') ? ' is-invalid' : ''), 'placeholder' => 'Horaapertura']) }}
             {!! $errors->first('horaApertura', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('horaCierre') }}
-            {{ Form::text('horaCierre', $horarioAtencionCentroDeportivo->horaCierre, ['class' => 'form-control' . ($errors->has('horaCierre') ? ' is-invalid' : ''), 'placeholder' => 'Horacierre']) }}
+            {{ Form::text('horaCierre', $horarioAtencionCd->horaCierre, ['class' => 'form-control' . ($errors->has('horaCierre') ? ' is-invalid' : ''), 'placeholder' => 'Horacierre']) }}
             {!! $errors->first('horaCierre', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

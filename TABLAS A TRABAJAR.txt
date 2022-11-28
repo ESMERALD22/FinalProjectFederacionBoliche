@@ -1,0 +1,46 @@
+CREADAS:
+Departamento
+	Municipio
+
+		
+
+
+MANUEL:
+	FADN
+	Institucion	
+	NivelFadn
+	NivelCDag
+	Contrato			
+		EntrenadoDatosPersonales
+			Centro Deportivo
+				horarioAtencion
+				EntrenadorCentroDeportivo
+		
+		
+CELIA:
+	TipoAsistencia			
+		Encargado
+		AtletaDatosPersonales
+			Control Asistencia
+			Alergias
+			Inscripcion
+				
+
+JOSE:				
+	Anuncios
+	Categoria	
+	EtapaDeportiva
+	TipoAtleta
+	LineaDesarrollo
+	PRT	
+		Administrador
+				AsignacionAtleta (trabajar de ultimo)
+	TipoRol	
+	
+
+PENDIENTE.
+	FactoresEmocionalesSensoriales
+		Psicologo
+			Reporte
+				Tareas
+				FactoresReporte				

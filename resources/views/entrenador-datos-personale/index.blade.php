@@ -1,10 +1,9 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-@section('template_title')
-    Entrenador Datos Personale
-@endsection
+@section('title', 'Dashboard')
+@section('content_header')
 
-@section('content')
+@section('content_header')  
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -46,7 +45,7 @@
 										<th>Telefonodecasa</th>
 										<th>Celular</th>
 										<th>Genero</th>
-										<th>Idmunicipio</th>
+										<th>Municipio</th>
 										<th>Direccion</th>
 
                                         <th></th>
@@ -67,7 +66,7 @@
 											<td>{{ $entrenadorDatosPersonale->telefonodecasa }}</td>
 											<td>{{ $entrenadorDatosPersonale->celular }}</td>
 											<td>{{ $entrenadorDatosPersonale->genero }}</td>
-											<td>{{ $entrenadorDatosPersonale->idMunicipio }}</td>
+											<td>{{ $entrenadorDatosPersonale->municipio->municipio }}</td>
 											<td>{{ $entrenadorDatosPersonale->direccion }}</td>
 
                                             <td>
@@ -90,4 +89,13 @@
             </div>
         </div>
     </div>
-@endsection
+    @stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+

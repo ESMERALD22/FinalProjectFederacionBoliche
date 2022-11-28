@@ -381,12 +381,21 @@ return [
                     'url'  => '/prt',
                 ],
                 [
+
                     'text' => 'Etapa Deportiva',
                     'url'  => '/etapa-deportivas',
                 ],
                 [
                     'text' => 'Asignar Atleta',
-                    'url'  => '/asignacionAtletum',
+                    'url'  => '/asignacionAtletum'
+                    ],
+                    [
+                    'text' => 'Inscripciones',
+                    'url'  => 'ficha1s',
+                ],
+                [
+                    'text' => 'Control Asistencia',
+                    'url'  => 'control-asistencia',
                 ],
             ],
         ],
@@ -417,27 +426,27 @@ return [
             'submenu' => [
                 [
                     'text' => 'Asistecia',
-                    'url'  => '#',
+                    'url'  => 'report1',
                 ],
                 [
                     'text'    => 'Atletas',
-                    'url'     => '#',
+                    'url'     => 'formAtleta',
                 ],
                 [
                     'text' => 'Entrenador',
-                    'url'  => '#',
+                    'url'  => 'formEntrenador',
                 ],
                 [
                     'text' => 'Centro',
-                    'url'  => '#',
+                    'url'  => 'formCentro',
                 ],
                 [
                     'text' => 'Reporte 27',
-                    'url'  => '#',
+                    'url'  => 'form27',
                 ],
                 [
                     'text' => 'Reporte 27.2',
-                    'url'  => '#',
+                    'url'  => 'form272',
                 ],
             ],
         ],

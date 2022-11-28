@@ -35,15 +35,14 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Idencargado</th>
 										<th>Cui</th>
-										<th>Nombre1</th>
-										<th>Nombre2</th>
-										<th>Apellido1</th>
-										<th>Apellido2</th>
-										<th>Apellidodecasada</th>
-										<th>Fechanaciemiento</th>
-										<th>Telefonodecasa</th>
+										<th>1er Nombre</th>
+										<th>2do Nombre</th>
+										<th>1er Apellido</th>
+										<th>2do Apellido</th>
+										<th>Apellido de casada</th>
+										<th>Fecha de nacimiento</th>
+										<th>Telefono de casa</th>
 										<th>Celular</th>
 										<th>Genero</th>
 										<th>Direccion</th>
@@ -56,7 +55,6 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $encargado->idencargado }}</td>
 											<td>{{ $encargado->cui }}</td>
 											<td>{{ $encargado->nombre1 }}</td>
 											<td>{{ $encargado->nombre2 }}</td>

@@ -3,8 +3,7 @@
 @section('title', 'Dashboard')
 @section('content_header')
 
-@section('content_header')    
-    <section class="content container-fluid">
+@section('content_header')       <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
