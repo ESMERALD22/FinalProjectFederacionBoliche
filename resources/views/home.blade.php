@@ -1,11 +1,17 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+		@section('title', 'Dashboard')
+    		@section('content_header')
+
+		@section('content_header')  
+
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('INICIO') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,10 +20,18 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('BIENVENIDO AL SISTEMA DE LA FEDERACION DE BOLICHE') }}
                 </div>
             </div>
         </div>
     </div>
 </div>
-@endsection
+@stop
+
+@section('css')
+        <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+        <script> console.log('Hi!'); </script>
+@stop

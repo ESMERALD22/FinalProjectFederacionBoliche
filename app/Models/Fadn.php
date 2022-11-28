@@ -42,7 +42,7 @@ class Fadn extends Model
     {
         return $this->hasMany('App\Models\AsignacionAtletum', 'idFADN', 'id');
     }
-}
+
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

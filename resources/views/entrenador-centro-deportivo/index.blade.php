@@ -54,7 +54,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $entrenadorCentroDeportivo->entrenadore->nombre1 }}</td>
+											<td>{{ $entrenadorCentroDeportivo->entrenadorDatosPersonale->nombre1 }}</td>
 											<td>{{ $entrenadorCentroDeportivo->foto }}</td>
 											<td>{{ $entrenadorCentroDeportivo->correo }}</td>
 											<td>{{ $entrenadorCentroDeportivo->nivelAcademico }}</td>

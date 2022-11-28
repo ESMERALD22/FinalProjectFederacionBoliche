@@ -45,8 +45,7 @@
                             <tbody>
                                 @foreach ($controlAsistencia as $controlAsistencium)
                                 <tr>
-                                    <td>{{ ++$i }}</td>
-
+                               
                                     <td>{{ $controlAsistencium->atletaDatosPersonale->nombre1 . ' - ' .
                                                 $controlAsistencium->atletaDatosPersonale->nombre2 . ' - ' .
                                                 $controlAsistencium->atletaDatosPersonale-> apellido1 . ' - ' .

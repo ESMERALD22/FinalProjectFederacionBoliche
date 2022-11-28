@@ -332,7 +332,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Entrenador',
-                    'url'  => '#',
+                    'url'  => '/entrenador-datos-personales',
                 ],
                 [
                     'text'    => 'Psicologos',
@@ -357,12 +357,12 @@ return [
                 ],
                 [
                     'text'    => 'Registrar y listar tipo de contrato del entenador',
-                    'url'     => '#',
+                    'url'     => 'contratos',
                     
                 ],
                 [
                     'text' => 'Registrar y listar nivel CDAG',
-                    'url'  => '#',
+                    'url'  => 'nivel-cdags',
                 ],
                 [
                     'text' => 'Categorias',
@@ -393,7 +393,11 @@ return [
                     'text' => 'Inscripciones',
                     'url'  => 'ficha1s',
                 ],
-                [
+[
+    'text' => 'Tipo de Asistencia',
+    'url'  => 'tipo-asistencia',
+],
+[
                     'text' => 'Control Asistencia',
                     'url'  => 'control-asistencia',
                 ],
@@ -405,16 +409,16 @@ return [
             'submenu' => [
                 [
                     'text' => 'Registar y listar centro deportivo',
-                    'url'  => '#',
+                    'url'  => 'centro-deportivos',
                 ],
                 [
                     'text'    => 'Registrar y listar Horario de antecion',
-                    'url'     => '#',
+                    'url'     => 'horario-atencion-cds',
                     
                 ],
                 [
-                    'text' => 'Registrar y listar trabajaores en Centro deportivo',
-                    'url'  => '#',
+                    'text' => 'Registrar y listar Entrenadores en Centro deportivo',
+                    'url'  => 'entrenador-centro-deportivos',
                 ],
             ],
         ],

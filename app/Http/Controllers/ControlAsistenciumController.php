@@ -22,7 +22,7 @@ class ControlAsistenciumController extends Controller
      */
     public function index()
     {
-        $controlAsistencia = ControlAsistencium::paginate();
+        $controlAsistencia = ControlAsistencium::orderBy('fecha','desc')->paginate();
 
         return view('control-asistencium.index', compact('controlAsistencia'))
             ->with('i', (request()->input('page', 1) - 1) * $controlAsistencia->perPage());

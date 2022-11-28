@@ -57,7 +57,7 @@
 											<td>{{ $centroDeportivo->implementacion }}</td>
 											<td>{{ $centroDeportivo->accesibilidad }}</td>
 											<td>{{ $centroDeportivo->fadn->nombreFADN }}</td>
-											<td>{{ $centroDeportivo->institucione->tipoInstitucion }}</td>
+											<td>{{ $centroDeportivo->institucion->tipoInstitucion }}</td>
 											<td>{{ $centroDeportivo->espacioFisico }}</td>
 											<td>{{ $centroDeportivo->municipio->municipio }}</td>
 

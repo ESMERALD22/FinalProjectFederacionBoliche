@@ -1,9 +1,3 @@
-@extends('adminlte::page')
-
-@section('title', 'Dashboard')
-@section('content_header')
-
-@section('content_header')    
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -26,12 +20,3 @@
             </div>
         </div>
     </section>
-    @stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
-@stop
