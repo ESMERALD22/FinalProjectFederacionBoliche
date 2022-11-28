@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\AtletaDatosPersonale;
+use App\Models\Departamento;
+use App\Models\Municipio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class AtletaDatosPersonaleController
@@ -29,10 +32,21 @@ class AtletaDatosPersonaleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+
+        $valor1 = $request->input("id");
+
         $atletaDatosPersonale = new AtletaDatosPersonale();
-        return view('atleta-datos-personale.create', compact('atletaDatosPersonale'));
+//        echo $valor1;
+        $genero = array("Masculino", "Femenino");
+        $estadoCivil = array("Soltero", "Casado", "Divorciado", "Viudo");
+        $municipios = DB::table('municipio')->where('idDepartamento', $valor1)->pluck('municipio','id');
+
+      //  foreach ($municipios as $muni)        
+        //    echo $muni->municipio;
+
+       return view('atleta-datos-personale.create', compact('atletaDatosPersonale', 'genero', 'estadoCivil', 'municipios'));
     }
 
     /**

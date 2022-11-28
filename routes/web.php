@@ -1,12 +1,15 @@
 <?php
 
+use App\Exports\CentroExport;
 use App\Http\Controllers\AlergiasAtletumController;
 use App\Http\Controllers\AtletaDatosPersonaleController;
 use App\Http\Controllers\ControlAsistenciumController;
 use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\DeptoMunController;
 use App\Http\Controllers\EncargadoController;
 use App\Http\Controllers\FactorEmocionalSensorialController;
 use App\Http\Controllers\FactoresReporteController;
+use App\Http\Controllers\Ficha1Controller;
 use App\Http\Controllers\InscripcionController;
 use App\Http\Controllers\MunicipioController;
 
@@ -25,6 +28,21 @@ use App\Http\Controllers\TipoAtletumController;
 use App\Http\Controllers\LineaDesarrolloController;
 use App\Http\Controllers\PrtController;
 use App\Http\Controllers\AdministradorController;
+use App\Http\Controllers\AsignacionAtletumController;
+use App\Http\Controllers\EtapaDeportivaController;
+
+use App\Http\Controllers\AtletaController;
+use App\Http\Controllers\CentroController;
+use App\Http\Controllers\EntrenadorController;
+use App\Http\Controllers\Form272Controller;
+use App\Http\Controllers\Form27Controller;
+use App\Http\Controllers\PsicologoController;
+use App\Http\Controllers\RelacionFAEI;
+use App\Http\Controllers\ReportAsistenciaController;
+use App\Http\Controllers\ReportePsicologicoController;
+use App\Http\Controllers\ReportCAController;
+use App\Http\Controllers\TareaController;
+use App\Http\Controllers\TipoAsistenciumController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,20 +79,22 @@ Route::resource('nivel-cdags',NivelCdagController::class);
 Route::resource('contratos',ContratoController::class);
 Route::resource('entrenador-datos-personales',EntrenadorDatosPersonaleController::class);
 Route::resource('centro-deportivos',CentroDeportivoController::class);
+
 Route::resource('horario-atencion-cds',HorarioAtencionCdController::class);
 Route::resource('entrenador-centro-deportivos',EntrenadorCentroDeportivoController::class);
 
-// Tenemos que hacer proyecto rapido
-//!--- 21 se entrega el proyecto  ----
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::resource('anuncio', AnuncioController::class);
 Route::resource('categoria', CategoriumController::class);
 Route::resource('tipoAtleta', TipoAtletumController::class);
 Route::resource('linea-desarrollos', LineaDesarrolloController::class);
 Route::resource('prt', PrtController::class);
 Route::resource('administradors', AdministradorController::class);
+Route::resource('asignacionAtletum', AsignacionAtletumController::class);
+Route::resource('etapa-deportivas', EtapaDeportivaController::class);
+
 
 Route::resource('tipo-asistencia', TipoAsistenciumController::class);
 Route::resource('encargados', EncargadoController::class);
@@ -87,11 +107,21 @@ Route::resource('factor-emocional-sensorials', FactorEmocionalSensorialControlle
 Route::resource('reporte-psicologicos', ReportePsicologicoController::class);
 Route::resource('factores-reportes', FactoresReporteController::class);
 Route::resource('tareas', TareaController::class);
+Route::resource('DeptoMun', DeptoMunController::class);
+Route::resource('ficha1s', Ficha1Controller::class);
+Route::resource('relacionFAEI', RelacionFAEI::class);
+Route::resource('report', ReportAsistenciaController::class);
+Route::resource('report1', ReportCAController::class);
+Route::resource('form27', Form27Controller::class);
+Route::resource('form272', Form272Controller::class);
+Route::resource('formAtleta', AtletaController::class);
+Route::resource('formEntrenador', EntrenadorController::class);
+Route::resource('formCentro', CentroController::class);
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+
+
+//Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

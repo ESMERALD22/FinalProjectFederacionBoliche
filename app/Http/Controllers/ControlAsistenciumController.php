@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AtletaDatosPersonale;
+use App\Models\Categorium;
 use App\Models\ControlAsistencium;
+use App\Models\TipoAsistencium;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class ControlAsistenciumController
@@ -18,7 +22,7 @@ class ControlAsistenciumController extends Controller
      */
     public function index()
     {
-        $controlAsistencia = ControlAsistencium::paginate();
+        $controlAsistencia = ControlAsistencium::orderBy('fecha','desc')->paginate();
 
         return view('control-asistencium.index', compact('controlAsistencia'))
             ->with('i', (request()->input('page', 1) - 1) * $controlAsistencia->perPage());
@@ -29,10 +33,27 @@ class ControlAsistenciumController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        /*        $valor1 = $request->input("selectC");
+
+        if ($valor1 == 0) {
+            $atletas = AtletaDatosPersonale::all();
+            $categoria1 = Categorium::all()->first();
+        } else {
+            $atletas = AtletaDatosPersonale::join("asignacion_atleta", "atleta_datos_personales.id", "=", "asignacion_atleta.idAtleta")
+                ->join("categoria", "categoria.id", "=", "asignacion_atleta.idCategoria")
+                ->where("categoria.id", "=", $valor1)
+                ->get();
+            $categoria1 = Categorium::find($valor1);
+        }
+*/
+        $atletas = AtletaDatosPersonale::all();
+
         $controlAsistencium = new ControlAsistencium();
-        return view('control-asistencium.create', compact('controlAsistencium'));
+        $tiposA = TipoAsistencium::all();
+        $categorias = Categorium::all();
+        return view('control-asistencium.asistencia', compact('controlAsistencium', 'atletas', 'tiposA'));
     }
 
     /**
@@ -43,13 +64,21 @@ class ControlAsistenciumController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(ControlAsistencium::$rules);
+        $valor1 = $request->input("select");
+        $valor2 = $request->input("fechaA");
+        $valor3 = $request->input("idA");
 
-        $controlAsistencium = ControlAsistencium::create($request->all());
-
-        return redirect()->route('control-asistencia.index')
-            ->with('success', 'ControlAsistencium created successfully.');
-    }
+        $controlAsistencium = ControlAsistencium::create(
+            [
+                'idAtleta' => $valor3,
+                'fecha' => $valor2,
+                'idTipoAsistencia' => $valor1
+            ]
+        );
+        return redirect()->route('control-asistencia.create')
+            ->with('success', 'Asitencia de atleta registrada');
+    
+  }
 
     /**
      * Display the specified resource.

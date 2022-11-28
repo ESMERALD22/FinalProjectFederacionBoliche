@@ -1,0 +1,6 @@
+Control de asistncia
+	filtro: categoria, nombre, estado(activo-inactivo).
+
+
+ 
+	

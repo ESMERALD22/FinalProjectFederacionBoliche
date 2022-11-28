@@ -48,7 +48,7 @@ class PrtController extends Controller
         $prt = Prt::create($request->all());
 
         return redirect()->route('prt.index')
-            ->with('success', 'Prt created successfully.');
+            ->with('success', 'PRT Creada.');
     }
 
     /**
@@ -91,7 +91,7 @@ class PrtController extends Controller
         $prt->update($request->all());
 
         return redirect()->route('prt.index')
-            ->with('success', 'Prt updated successfully');
+            ->with('success', 'PRT Actualizado');
     }
 
     /**
@@ -104,6 +104,6 @@ class PrtController extends Controller
         $prt = Prt::find($id)->delete();
 
         return redirect()->route('prt.index')
-            ->with('success', 'Prt deleted successfully');
+            ->with('success', 'PRT Eliminada');
     }
 }

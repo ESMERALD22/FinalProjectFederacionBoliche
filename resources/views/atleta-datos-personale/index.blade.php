@@ -16,7 +16,7 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('atleta-datos-personales.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('DeptoMun.index') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -35,22 +35,22 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Cui</th>
+										<th>CUI</th>
 										<th>Pasaporte</th>
-										<th>Nit</th>
-										<th>Nombre1</th>
-										<th>Nombre2</th>
-										<th>Apellido1</th>
-										<th>Apellido2</th>
-										<th>Apellidodecasada</th>
-										<th>Fechanaciemiento</th>
+										<th>NIT</th>
+										<th>1er Nombre</th>
+										<th>2do Nombre</th>
+										<th>1er Apellido</th>
+										<th>2do Apellido</th>
+										<th>Apellido de casada</th>
+										<th>Fecha de nacimiento</th>
 										<th>Celular</th>
-										<th>Telefonodecasa</th>
+										<th>Telefono de casa</th>
 										<th>Genero</th>
-										<th>Idmunicipio</th>
+										<th>Municipio</th>
 										<th>Direccion</th>
 										<th>Correo</th>
-										<th>Estadocivil</th>
+										<th>Estado civil</th>
 										<th>Etnia</th>
 										<th>Escolaridad</th>
 

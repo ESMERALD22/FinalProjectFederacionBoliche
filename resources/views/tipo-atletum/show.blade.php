@@ -10,17 +10,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Tipo Atletum</span>
+                            <span class="card-title">Ver Tipo Atletum</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('tipoAtleta.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('tipoAtleta.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Tipoatleta:</strong>
+                            <strong>Tipo atleta:</strong>
                             {{ $tipoAtletum->tipoAtleta }}
                         </div>
 

@@ -17,7 +17,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('administradors.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear Administrador') }}
                                 </a>
                               </div>
                         </div>
@@ -35,17 +35,17 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Cui</th>
-										<th>Nombre1</th>
-										<th>Nombre2</th>
-										<th>Apellido1</th>
-										<th>Apellido2</th>
-										<th>Apellidodecasada</th>
-										<th>Fechanaciemiento</th>
-										<th>Telefonodecasa</th>
+										<th>CUI</th>
+										<th>Nombre 1</th>
+										<th>Nombre 2</th>
+										<th>Apellido 1</th>
+										<th>Apellido 2</th>
+										<th>Apellido de casada</th>
+										<th>Fecha de naciemiento</th>
+										<th>Telefono de casa</th>
 										<th>Celular</th>
 										<th>Genero</th>
-										<th>Idmunicipio</th>
+										<th>Municipio</th>
 										<th>Direccion</th>
 
                                         <th></th>
@@ -66,16 +66,16 @@
 											<td>{{ $administrador->telefonodecasa }}</td>
 											<td>{{ $administrador->celular }}</td>
 											<td>{{ $administrador->genero }}</td>
-											<td>{{ $administrador->idMunicipio }}</td>
+											<td>{{ $administrador->municipio->municipio }}</td>
 											<td>{{ $administrador->direccion }}</td>
 
                                             <td>
                                                 <form action="{{ route('administradors.destroy',$administrador->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('administradors.show',$administrador->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('administradors.edit',$administrador->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('administradors.show',$administrador->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('administradors.edit',$administrador->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

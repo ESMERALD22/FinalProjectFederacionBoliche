@@ -54,8 +54,11 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->nombre1 }} {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->nombre2 }}
-                                                {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->apellido1 }} {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->apellido2 }}</td>
+											<td>{{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->nombre1 }}
+                      {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->nombre2 }}
+                                               
+                                               {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->apellido1 }} 
+                                               {{ $entrenadorCentroDeportivo->EntrenadorDatosPersonale->apellido2 }}</td>
 											<td>{{ $entrenadorCentroDeportivo->foto }}</td>
 											<td>{{ $entrenadorCentroDeportivo->correo }}</td>
 											<td>{{ $entrenadorCentroDeportivo->nivelAcademico }}</td>

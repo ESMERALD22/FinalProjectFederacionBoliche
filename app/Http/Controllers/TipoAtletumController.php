@@ -48,7 +48,7 @@ class TipoAtletumController extends Controller
         $tipoAtletum = TipoAtletum::create($request->all());
 
         return redirect()->route('tipoAtleta.index')
-            ->with('success', 'TipoAtletum created successfully.');
+            ->with('success', 'Tipo atleta creado.');
     }
 
     /**
@@ -91,7 +91,7 @@ class TipoAtletumController extends Controller
         $tipoAtletum->update($request->all());
 
         return redirect()->route('tipoAtleta.index')
-            ->with('success', 'TipoAtletum updated successfully');
+            ->with('success', 'Tipo atleta actualizado');
     }
 
     /**
@@ -104,6 +104,6 @@ class TipoAtletumController extends Controller
         $tipoAtletum = TipoAtletum::find($id)->delete();
 
         return redirect()->route('tipoAtleta.index')
-            ->with('success', 'TipoAtletum deleted successfully');
+            ->with('success', 'Tipo atleta eliminado');
     }
 }
