@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Tipo Atleta</span>
+                        <span class="card-title">Editar Tipo Atleta</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('tipoAtleta.update', $tipoAtletum->id) }}"  role="form" enctype="multipart/form-data">

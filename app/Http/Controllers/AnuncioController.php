@@ -48,7 +48,7 @@ class AnuncioController extends Controller
         $anuncio = Anuncio::create($request->all());
 
         return redirect()->route('anuncio.index')
-            ->with('success', 'Anuncio created successfully.');
+            ->with('success', 'Anuncio creado.');
     }
 
     /**
@@ -91,7 +91,7 @@ class AnuncioController extends Controller
         $anuncio->update($request->all());
 
         return redirect()->route('anuncio.index')
-            ->with('success', 'Anuncio updated successfully');
+            ->with('success', 'Anuncio actualizado');
     }
 
     /**
@@ -104,6 +104,6 @@ class AnuncioController extends Controller
         $anuncio = Anuncio::find($id)->delete();
 
         return redirect()->route('anuncio.index')
-            ->with('success', 'Anuncio deleted successfully');
+            ->with('success', 'Anuncio eliminado');
     }
 }

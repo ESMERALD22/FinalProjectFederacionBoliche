@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Linea Desarrollo</span>
+                        <span class="card-title">Editar Linea Desarrollo</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('linea-desarrollos.update', $lineaDesarrollo->id) }}"  role="form" enctype="multipart/form-data">

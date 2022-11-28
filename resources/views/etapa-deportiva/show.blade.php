@@ -3,25 +3,25 @@
 		@section('title', 'Dashboard')
     		@section('content_header')
 
-		@section('content_header') 
+		@section('content_header')
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Ver Tipo Atletum</span>
+                            <span class="card-title">Ver Etapa Deportiva</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('tipoAtleta.index') }}"> Regresar</a>
+                            <a class="btn btn-primary" href="{{ route('etapa-deportivas.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Tipo atleta:</strong>
-                            {{ $tipoAtletum->tipoAtleta }}
+                            <strong>Tipo etapa deportiva:</strong>
+                            {{ $etapaDeportiva->tipoEtapaDeportiva }}
                         </div>
 
                     </div>

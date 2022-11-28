@@ -17,15 +17,18 @@ use App\Http\Controllers\NivelCdagController;
 use App\Http\Controllers\ContratoController;
 use App\Http\Controllers\EntrenadorDatosPersonaleController;
 use App\Http\Controllers\CentroDeportivoController;
-use App\Http\Controllers\HorarioAtencionCentroDeportivoController;
+//use App\Http\Controllers\HorarioAtencionCentroDeportivoController;
 use App\Http\Controllers\EntrenadorCentroDeportivoController;
-=======
+
 use App\Http\Controllers\AnuncioController;
 use App\Http\Controllers\CategoriumController;
 use App\Http\Controllers\TipoAtletumController;
 use App\Http\Controllers\LineaDesarrolloController;
 use App\Http\Controllers\PrtController;
 use App\Http\Controllers\AdministradorController;
+use App\Http\Controllers\AsignacionAtletumController;
+use App\Http\Controllers\EtapaDeportivaController;
+
 
 use Illuminate\Support\Facades\Route;
 
@@ -64,20 +67,23 @@ Route::resource('nivel-cdags',NivelCdagController::class);
 Route::resource('contratos',ContratoController::class);
 Route::resource('entrenador-datos-personales',EntrenadorDatosPersonaleController::class);
 Route::resource('centro-deportivos',CentroDeportivoController::class);
-Route::resource('horario-atencion-centro-deportivos',HorarioAtencionCentroDeportivoController::class);
+//Route::resource('horario-atencion-centro-deportivos',HorarioAtencionCentroDeportivoController::class);
 Route::resource('entrenador-centro-deportivos',EntrenadorCentroDeportivoController::class);
 
 
-Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-=======
+
 Route::resource('anuncio', AnuncioController::class);
 Route::resource('categoria', CategoriumController::class);
 Route::resource('tipoAtleta', TipoAtletumController::class);
 Route::resource('linea-desarrollos', LineaDesarrolloController::class);
 Route::resource('prt', PrtController::class);
 Route::resource('administradors', AdministradorController::class);
+Route::resource('asignacionAtletum', AsignacionAtletumController::class);
+Route::resource('etapa-deportivas', EtapaDeportivaController::class);
+
 
 Route::resource('tipo-asistencia', TipoAsistenciumController::class);
 Route::resource('encargados', EncargadoController::class);

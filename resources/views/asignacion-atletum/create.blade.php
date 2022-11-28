@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
-    @section('content_header')
+		@section('title', 'Dashboard')
+    		@section('content_header')
 
-@section('content_header')  
+		@section('content_header')
 
 
     <section class="content container-fluid">
@@ -14,13 +14,13 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Crear Administrador</span>
+                        <span class="card-title">Crear Asignacion Atleta</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('administradors.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('asignacionAtletum.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('administrador.form')
+                            @include('asignacion-atletum.form')
 
                         </form>
                     </div>

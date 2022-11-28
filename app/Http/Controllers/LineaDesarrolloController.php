@@ -48,7 +48,7 @@ class LineaDesarrolloController extends Controller
         $lineaDesarrollo = LineaDesarrollo::create($request->all());
 
         return redirect()->route('linea-desarrollos.index')
-            ->with('success', 'LineaDesarrollo created successfully.');
+            ->with('success', 'Linea desarrollo creada.');
     }
 
     /**
@@ -91,7 +91,7 @@ class LineaDesarrolloController extends Controller
         $lineaDesarrollo->update($request->all());
 
         return redirect()->route('linea-desarrollos.index')
-            ->with('success', 'LineaDesarrollo updated successfully');
+            ->with('success', 'Linea Desarrollo Actulizada');
     }
 
     /**
@@ -104,6 +104,6 @@ class LineaDesarrolloController extends Controller
         $lineaDesarrollo = LineaDesarrollo::find($id)->delete();
 
         return redirect()->route('linea-desarrollos.index')
-            ->with('success', 'LineaDesarrollo deleted successfully');
+            ->with('success', 'Linea Desarrollo eliminada');
     }
 }

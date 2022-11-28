@@ -17,7 +17,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('linea-desarrollos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear Linea Desarrollo') }}
                                 </a>
                               </div>
                         </div>
@@ -35,7 +35,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Tipolineadesarrollo</th>
+										<th>Tipo linea desarrollo</th>
 
                                         <th></th>
                                     </tr>
@@ -49,11 +49,11 @@
 
                                             <td>
                                                 <form action="{{ route('linea-desarrollos.destroy',$lineaDesarrollo->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('linea-desarrollos.show',$lineaDesarrollo->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('linea-desarrollos.edit',$lineaDesarrollo->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('linea-desarrollos.show',$lineaDesarrollo->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('linea-desarrollos.edit',$lineaDesarrollo->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>
