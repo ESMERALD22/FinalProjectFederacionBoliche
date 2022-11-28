@@ -4,6 +4,7 @@
 @section('content_header')
 
 @section('content_header')
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-12">
@@ -17,7 +18,7 @@
 
 						<div class="float-right">
 							<a href="{{ route('DeptoMun.index') }}" class="btn btn-primary btn-sm float-right" data-placement="left">
-								{{ __('Crear Solicitud') }}
+								{{ __('Crear nueva Solicitud') }}
 							</a>
 						</div>
 					</div>
@@ -40,6 +41,8 @@
 									<th>Nombres</th>
 									<th>Estado</th>
 									<th></th>
+
+									<th></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -58,19 +61,22 @@
 										@endif
 									</td>
 									<td>
-										<form action="{{ route('ficha1s.destroy',$ficha1->id) }}" method="POST">
-											<a class="btn btn-sm btn-primary " href="{{ route('ficha1s.show',$ficha1->id) }}"><i class="fa fa-fw fa-eye"></i> Ver Ficha</a>
-											@csrf
-											@method('DELETE')
-											<button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i>Borrar Ficha</button>
-										</form>
-									</td>
-									<td>
 										<form action="{{ route('relacionFAEI.create',$ficha1->id) }}" method="GET">
 											<input type="hidden" id="uname" name="idFicha" value="{{$ficha1->id}}" readonly="true">
 											<button type="submit" class="btn btn-sm btn-primary "><i class="fa fa-fw fa-book"></i>Aprobar Solicitud</button>
 										</form>
 									</td>
+									<td>
+									<a class="btn btn-sm btn-primary " href="{{ route('ficha1s.show',$ficha1->id) }}"><i class="fa fa-fw fa-eye"></i> Ver Solicitud</a>
+									</td>
+									<td>
+										<form action="{{ route('ficha1s.destroy',$ficha1->id) }}" method="POST">
+											@csrf
+											@method('DELETE')
+											<button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar Solicitud</button>
+										</form>
+									</td>
+
 								</tr>
 								@endforeach
 							</tbody>

@@ -22,30 +22,7 @@
                     <p>{{ $message }}</p>
                 </div>
                 @endif
-
-                <div class="card card-default">
-                        <div class="card-header">
-                            <span class="card-title">BUSCAR POR CATEGORIAS</span>
-                        </div>
-                        <div class="card-body">
-                        <form method="GET" action="{{ route('control-asistencia.create') }}" role="form" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <select name="select">
-                                    @foreach ($categorias as $cat){
-                                    <option value="{{$cat->id}}"> {{$cat->nombre_categoria}}</option>
-                                    }
-                                    @endforeach
-                                </select>
-                                <button type="submit" class="btn btn-sm btn-primary ">Buscar</button>
-                            </div>
-                        </form>
-                        </div>
-                        <div class="card-body">
-                            <a class="btn btn-primary" href="{{ route('control-asistencia.create') }}"> TODAS</a>
-                        </div>
-                    </div>
-
-
+                                
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-hover">
@@ -54,7 +31,6 @@
                                     <th>Atleta</th>
                                     <th>Fecha</th>
                                     <th>Asistencia</th>
-
                                     <th></th>
                                 </tr>
                             </thead>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AtletaDatosPersonale;
+use App\Models\Categorium;
 use App\Models\ControlAsistencium;
 use App\Models\TipoAsistencium;
 use Illuminate\Http\Request;
@@ -34,17 +35,25 @@ class ControlAsistenciumController extends Controller
      */
     public function create(Request $request)
     {
-        $valor1 = $request->input("selectC");
-        //buscamos todos los atletas con esa categoria 
-        $atletas = AtletaDatosPersonale::join("asignacion_atleta", "atleta_datos_personales.id", "=", "asignacion_atleta.idAtleta")
-            ->join("categoria", "categoria.id", "=", "asignacion_atleta.idCategoria")
-            ->where("categoria.id", "=", $valor1)
-            ->get();
+        /*        $valor1 = $request->input("selectC");
+
+        if ($valor1 == 0) {
+            $atletas = AtletaDatosPersonale::all();
+            $categoria1 = Categorium::all()->first();
+        } else {
+            $atletas = AtletaDatosPersonale::join("asignacion_atleta", "atleta_datos_personales.id", "=", "asignacion_atleta.idAtleta")
+                ->join("categoria", "categoria.id", "=", "asignacion_atleta.idCategoria")
+                ->where("categoria.id", "=", $valor1)
+                ->get();
+            $categoria1 = Categorium::find($valor1);
+        }
+*/
+        $atletas = AtletaDatosPersonale::all();
 
         $controlAsistencium = new ControlAsistencium();
         $tiposA = TipoAsistencium::all();
-
-        return view('control-asistencium.asistencia', compact('controlAsistencium', 'atletas', 'tiposA','valor1'));
+        $categorias = Categorium::all();
+        return view('control-asistencium.asistencia', compact('controlAsistencium', 'atletas', 'tiposA'));
     }
 
     /**
@@ -67,8 +76,9 @@ class ControlAsistenciumController extends Controller
             ]
         );
         return redirect()->route('control-asistencia.create')
-            ->with('success', 'ControlAsistencium created successfully.');
-    }
+            ->with('success', 'Asitencia de atleta registrada');
+    
+  }
 
     /**
      * Display the specified resource.
