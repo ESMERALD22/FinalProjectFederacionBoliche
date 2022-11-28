@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Contratos')
 @section('content_header')
 
 @section('content_header')  
@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Contrato</span>
+                        <span class="card-title">Actualizar contrato</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('contratos.update', $contrato->id) }}"  role="form" enctype="multipart/form-data">

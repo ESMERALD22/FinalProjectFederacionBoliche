@@ -64,7 +64,8 @@ Route::resource('centro-deportivos',CentroDeportivoController::class);
 Route::resource('horario-atencion-cds',HorarioAtencionCdController::class);
 Route::resource('entrenador-centro-deportivos',EntrenadorCentroDeportivoController::class);
 
-
+// Tenemos que hacer proyecto rapido
+//!--- 21 se entrega el proyecto  ----
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Entrenador datos personales')
 @section('content_header')
 
 @section('content_header')  
@@ -12,12 +12,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Entrenador Datos Personale') }}
+                                {{ __('Datos personales del entrenador') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('entrenador-datos-personales.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Agregar nuevos datos') }}
                                 </a>
                               </div>
                         </div>
@@ -36,13 +36,10 @@
                                         <th>No</th>
                                         
 										<th>Cui</th>
-										<th>Nombre1</th>
-										<th>Nombre2</th>
-										<th>Apellido1</th>
-										<th>Apellido2</th>
-										<th>Apellidodecasada</th>
+										<th>Nombre completo</th>
+										<th>Apellido de casada</th>
 										<th>Fechanaciemiento</th>
-										<th>Telefonodecasa</th>
+										<th>Telefono de casa</th>
 										<th>Celular</th>
 										<th>Genero</th>
 										<th>Municipio</th>
@@ -57,10 +54,7 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $entrenadorDatosPersonale->cui }}</td>
-											<td>{{ $entrenadorDatosPersonale->nombre1 }}</td>
-											<td>{{ $entrenadorDatosPersonale->nombre2 }}</td>
-											<td>{{ $entrenadorDatosPersonale->apellido1 }}</td>
-											<td>{{ $entrenadorDatosPersonale->apellido2 }}</td>
+											<td>{{ $entrenadorDatosPersonale->nombre1 }} {{ $entrenadorDatosPersonale->nombre2 }} {{ $entrenadorDatosPersonale->apellido1 }} {{ $entrenadorDatosPersonale->apellido2 }}</td>
 											<td>{{ $entrenadorDatosPersonale->apellidoDeCasada }}</td>
 											<td>{{ $entrenadorDatosPersonale->fechaNaciemiento }}</td>
 											<td>{{ $entrenadorDatosPersonale->telefonodecasa }}</td>
@@ -71,11 +65,11 @@
 
                                             <td>
                                                 <form action="{{ route('entrenador-datos-personales.destroy',$entrenadorDatosPersonale->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('entrenador-datos-personales.show',$entrenadorDatosPersonale->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('entrenador-datos-personales.edit',$entrenadorDatosPersonale->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('entrenador-datos-personales.show',$entrenadorDatosPersonale->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('entrenador-datos-personales.edit',$entrenadorDatosPersonale->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i>Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

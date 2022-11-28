@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Entrenador datos personales')
 @section('content_header')
 
 @section('content_header')
@@ -10,10 +10,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Entrenador Datos Personale</span>
+                            <span class="card-title">Ver datos personales del entrenador</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('entrenador-datos-personales.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('entrenador-datos-personales.index') }}"> Regresar</a>
                         </div>
                     </div>
 
@@ -24,31 +24,31 @@
                             {{ $entrenadorDatosPersonale->cui }}
                         </div>
                         <div class="form-group">
-                            <strong>Nombre1:</strong>
+                            <strong>Primer nombre:</strong>
                             {{ $entrenadorDatosPersonale->nombre1 }}
                         </div>
                         <div class="form-group">
-                            <strong>Nombre2:</strong>
+                            <strong>Segundo nombre:</strong>
                             {{ $entrenadorDatosPersonale->nombre2 }}
                         </div>
                         <div class="form-group">
-                            <strong>Apellido1:</strong>
+                            <strong>Apellido paterno:</strong>
                             {{ $entrenadorDatosPersonale->apellido1 }}
                         </div>
                         <div class="form-group">
-                            <strong>Apellido2:</strong>
+                            <strong>Apellido materno:</strong>
                             {{ $entrenadorDatosPersonale->apellido2 }}
                         </div>
                         <div class="form-group">
-                            <strong>Apellidodecasada:</strong>
+                            <strong>Apellido de casada:</strong>
                             {{ $entrenadorDatosPersonale->apellidoDeCasada }}
                         </div>
                         <div class="form-group">
-                            <strong>Fechanaciemiento:</strong>
+                            <strong>Fecha de naciemiento:</strong>
                             {{ $entrenadorDatosPersonale->fechaNaciemiento }}
                         </div>
                         <div class="form-group">
-                            <strong>Telefonodecasa:</strong>
+                            <strong>Telefono de casa:</strong>
                             {{ $entrenadorDatosPersonale->telefonodecasa }}
                         </div>
                         <div class="form-group">
@@ -60,8 +60,8 @@
                             {{ $entrenadorDatosPersonale->genero }}
                         </div>
                         <div class="form-group">
-                            <strong>Idmunicipio:</strong>
-                            {{ $entrenadorDatosPersonale->idMunicipio }}
+                            <strong>Municipio:</strong>
+                            {{ $entrenadorDatosPersonale->municipio->municipio }}
                         </div>
                         <div class="form-group">
                             <strong>Direccion:</strong>

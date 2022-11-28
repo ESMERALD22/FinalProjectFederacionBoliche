@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Horarios de atención')
 @section('content_header')
 
 @section('content_header')
@@ -10,29 +10,29 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Horario Atencion Cd</span>
+                            <span class="card-title">Ver información de horario de atención de centro deportivo</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('horario-atencion-cds.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('horario-atencion-cds.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Idcentrodeportivo:</strong>
-                            {{ $horarioAtencionCd->idCentroDeportivo }}
+                            <strong>Centro deportivo:</strong>
+                            {{ $horarioAtencionCd->centroDeportivo->nombreCentroDeportivo }}
                         </div>
                         <div class="form-group">
-                            <strong>Dia:</strong>
+                            <strong>Día:</strong>
                             {{ $horarioAtencionCd->dia }}
                         </div>
                         <div class="form-group">
-                            <strong>Horaapertura:</strong>
+                            <strong>Hora de apertura:</strong>
                             {{ $horarioAtencionCd->horaApertura }}
                         </div>
                         <div class="form-group">
-                            <strong>Horacierre:</strong>
+                            <strong>Hora de cierre:</strong>
                             {{ $horarioAtencionCd->horaCierre }}
                         </div>
 

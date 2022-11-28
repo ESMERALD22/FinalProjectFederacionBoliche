@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Centro deportivos')
 @section('content_header')
 
 @section('content_header')  
@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Centro Deportivo</span>
+                        <span class="card-title">Agregar centro deportivo</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('centro-deportivos.store') }}"  role="form" enctype="multipart/form-data">

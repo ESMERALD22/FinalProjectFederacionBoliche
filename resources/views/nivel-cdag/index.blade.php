@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Nivel CDAG')
 @section('content_header')
 
 @section('content_header')  
@@ -12,12 +12,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Nivel Cdag') }}
+                                {{ __('Nivel de CDAG') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('nivel-cdags.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Agregar nivel CDAG') }}
                                 </a>
                               </div>
                         </div>
@@ -35,7 +35,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Nivelcdag</th>
+										<th>Nivel de CDAG</th>
 
                                         <th></th>
                                     </tr>
@@ -49,11 +49,11 @@
 
                                             <td>
                                                 <form action="{{ route('nivel-cdags.destroy',$nivelCdag->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('nivel-cdags.show',$nivelCdag->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('nivel-cdags.edit',$nivelCdag->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('nivel-cdags.show',$nivelCdag->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('nivel-cdags.edit',$nivelCdag->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

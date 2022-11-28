@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Horarios de atención')
 @section('content_header')
 
 @section('content_header') 
@@ -12,12 +12,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Horario Atencion Cd') }}
+                                {{ __('Horario de atención de centro deportivo') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('horario-atencion-cds.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Agregar nuevo horario') }}
                                 </a>
                               </div>
                         </div>
@@ -35,10 +35,10 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Idcentrodeportivo</th>
-										<th>Dia</th>
-										<th>Horaapertura</th>
-										<th>Horacierre</th>
+										<th>Centro deportivo</th>
+										<th>Día</th>
+										<th>Hora de apertura</th>
+										<th>Hora de cierre</th>
 
                                         <th></th>
                                     </tr>
@@ -48,7 +48,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $horarioAtencionCd->centro->nombreCentroDeportivo }}</td>
+											<td>{{ $horarioAtencionCd->centroDeportivo->nombreCentroDeportivo }}</td>
 											<td>{{ $horarioAtencionCd->dia }}</td>
 											<td>{{ $horarioAtencionCd->horaApertura }}</td>
 											<td>{{ $horarioAtencionCd->horaCierre }}</td>

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Nivel CDAG')
 @section('content_header')
 
 @section('content_header')  
@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Nivel Cdag</span>
+                        <span class="card-title">Actualizar Nivel de CDAG</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('nivel-cdags.update', $nivelCdag->id) }}"  role="form" enctype="multipart/form-data">

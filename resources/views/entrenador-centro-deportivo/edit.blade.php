@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Entrenador')
 @section('content_header')
 
 @section('content_header') 
@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Entrenador Centro Deportivo</span>
+                        <span class="card-title">Actualizar entrenador de centro deportivo</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('entrenador-centro-deportivos.update', $entrenadorCentroDeportivo->id) }}"  role="form" enctype="multipart/form-data">

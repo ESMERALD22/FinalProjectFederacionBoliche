@@ -38,7 +38,7 @@ class EntrenadorCentroDeportivoController extends Controller
     public function create()
     {
         $entrenadorCentroDeportivo = new EntrenadorCentroDeportivo();
-        $entrenadores = EntrenadorDatosPersonale::pluck('nombre1','nombre2','apellido1','apellido2','cui','id');
+        $entrenadores = EntrenadorDatosPersonale::pluck('nombre1','id');
         $fadns = Fadn::pluck('nombreFADN','id');
         $nivelfadns = NivelFadn::pluck('nivelFADN','id');
         $centrodeportivos = CentroDeportivo::pluck('nombreCentroDeportivo','id');
@@ -85,7 +85,7 @@ class EntrenadorCentroDeportivoController extends Controller
     public function edit($id)
     {
         $entrenadorCentroDeportivo = EntrenadorCentroDeportivo::find($id);
-        $entrenadores = EntrenadorDatosPersonale::pluck('nombre1','nombre2','apellido1','apellido2','cui','id');
+        $entrenadores = EntrenadorDatosPersonale::pluck('nombre1','id');
         $fadns = Fadn::pluck('nombreFADN','id');
         $nivelfadns = NivelFadn::pluck('nivelFADN','id');
         $centrodeportivos = CentroDeportivo::pluck('nombreCentroDeportivo','id');

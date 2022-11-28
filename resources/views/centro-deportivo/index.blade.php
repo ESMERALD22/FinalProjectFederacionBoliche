@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Centro deportivo')
 @section('content_header')
 
 @section('content_header') 
@@ -12,12 +12,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Centro Deportivo') }}
+                                {{ __('Centro deportivo') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('centro-deportivos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Agregar centro deportivo') }}
                                 </a>
                               </div>
                         </div>
@@ -35,14 +35,14 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Nombrecentrodeportivo</th>
-										<th>Direccion</th>
-										<th>Implementacion</th>
+										<th>Nombre del centro deportivo</th>
+										<th>Dirección</th>
+										<th>Implementación</th>
 										<th>Accesibilidad</th>
-										<th>Idfadn</th>
-										<th>Idinstitucion</th>
-										<th>Espaciofisico</th>
-										<th>Idmunicipio</th>
+										<th>FADN</th>
+										<th>Institución</th>
+										<th>Espacio físico</th>
+										<th>Municipio</th>
 
                                         <th></th>
                                     </tr>
@@ -57,7 +57,7 @@
 											<td>{{ $centroDeportivo->implementacion }}</td>
 											<td>{{ $centroDeportivo->accesibilidad }}</td>
 											<td>{{ $centroDeportivo->fadn->nombreFADN }}</td>
-											<td>{{ $centroDeportivo->institucione->tipoInstitucion }}</td>
+											<td>{{ $centroDeportivo->institucion->tipoInstitucion }}</td>
 											<td>{{ $centroDeportivo->espacioFisico }}</td>
 											<td>{{ $centroDeportivo->municipio->municipio }}</td>
 

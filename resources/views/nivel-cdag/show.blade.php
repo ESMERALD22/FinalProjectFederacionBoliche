@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Nivel CDAG')
 @section('content_header')
 
 @section('content_header')
@@ -10,17 +10,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Nivel Cdag</span>
+                            <span class="card-title">Ver Nivel de CDAG</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('nivel-cdags.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('nivel-cdags.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Nivelcdag:</strong>
+                            <strong>Nivel de CDAG:</strong>
                             {{ $nivelCdag->nivelCDAG }}
                         </div>
 

@@ -10,17 +10,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Contrato</span>
+                            <span class="card-title">Ver contrato</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('contratos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('contratos.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Nombrecontrato:</strong>
+                            <strong>Nombre del contrato:</strong>
                             {{ $contrato->nombreContrato }}
                         </div>
 
