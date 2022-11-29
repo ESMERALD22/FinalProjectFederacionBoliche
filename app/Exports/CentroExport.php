@@ -13,7 +13,7 @@ class CentroExport implements FromCollection, WithHeadings
     */
     public function collection()
     {
-        $form27 = DB::table('centrodeportivo')
+        $form27 = DB::table('centro_deportivo')
             ->get();
         return $form27;
     }
