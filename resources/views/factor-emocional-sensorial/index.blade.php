@@ -17,7 +17,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('factor-emocional-sensorials.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear nuevo factor') }}
                                 </a>
                               </div>
                         </div>
@@ -35,7 +35,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Nombrefactor</th>
+										<th>Nombre del factor</th>
 
                                         <th></th>
                                     </tr>
@@ -49,11 +49,11 @@
 
                                             <td>
                                                 <form action="{{ route('factor-emocional-sensorials.destroy',$factorEmocionalSensorial->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('factor-emocional-sensorials.show',$factorEmocionalSensorial->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('factor-emocional-sensorials.edit',$factorEmocionalSensorial->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('factor-emocional-sensorials.show',$factorEmocionalSensorial->id) }}"><i class="fa fa-fw fa-eye"></i> VER</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('factor-emocional-sensorials.edit',$factorEmocionalSensorial->id) }}"><i class="fa fa-fw fa-edit"></i> EDITAR</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> ELIMINAR</button>
                                                 </form>
                                             </td>
                                         </tr>

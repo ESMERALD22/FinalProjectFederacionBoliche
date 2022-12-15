@@ -20,55 +20,55 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Idpsicologo:</strong>
+                            <strong>Id:</strong>
                             {{ $psicologo->idpsicologo }}
                         </div>
                         <div class="form-group">
-                            <strong>Cui:</strong>
+                            <strong>CUI:</strong>
                             {{ $psicologo->cui }}
                         </div>
                         <div class="form-group">
-                            <strong>Nombre1:</strong>
+                            <strong>1ER NOMBRE:</strong>
                             {{ $psicologo->nombre1 }}
                         </div>
                         <div class="form-group">
-                            <strong>Nombre2:</strong>
+                            <strong>2DO NOMBRE:</strong>
                             {{ $psicologo->nombre2 }}
                         </div>
                         <div class="form-group">
-                            <strong>Apellido1:</strong>
+                            <strong>1ER APELLIDO:</strong>
                             {{ $psicologo->apellido1 }}
                         </div>
                         <div class="form-group">
-                            <strong>Apellido2:</strong>
+                            <strong>2DO APELLIDO:</strong>
                             {{ $psicologo->apellido2 }}
                         </div>
                         <div class="form-group">
-                            <strong>Apellidodecasada:</strong>
+                            <strong>APELLIDO DE CASADA:</strong>
                             {{ $psicologo->apellidoDeCasada }}
                         </div>
                         <div class="form-group">
-                            <strong>Fechanaciemiento:</strong>
+                            <strong>FECHA DE NACIMIENTO:</strong>
                             {{ $psicologo->fechaNaciemiento }}
                         </div>
                         <div class="form-group">
-                            <strong>Telefonodecasa:</strong>
+                            <strong>TELEFONO DE CASA:</strong>
                             {{ $psicologo->telefonodecasa }}
                         </div>
                         <div class="form-group">
-                            <strong>Celular:</strong>
+                            <strong>CELULAR:</strong>
                             {{ $psicologo->celular }}
                         </div>
                         <div class="form-group">
-                            <strong>Genero:</strong>
+                            <strong>GENERO:</strong>
                             {{ $psicologo->genero }}
                         </div>
                         <div class="form-group">
-                            <strong>Direccion:</strong>
+                            <strong>DIRECCION:</strong>
                             {{ $psicologo->direccion }}
                         </div>
                         <div class="form-group">
-                            <strong>Idmunicipio:</strong>
+                            <strong>IdMUNICIPIO:</strong>
                             {{ $psicologo->idMunicipio }}
                         </div>
 

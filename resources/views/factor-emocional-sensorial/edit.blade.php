@@ -12,7 +12,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Factor Emocional Sensorial</span>
+                        <span class="card-title">Actualizar Factor Emocional Sensorial</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('factor-emocional-sensorials.update', $factorEmocionalSensorial->id) }}"  role="form" enctype="multipart/form-data">

@@ -11,12 +11,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Tipo Asistencium') }}
+                                {{ __('Tipo de Asistencia') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('tipo-asistencia.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear otro tipo de Asistencia') }}
                                 </a>
                               </div>
                         </div>
@@ -48,11 +48,11 @@
 
                                             <td>
                                                 <form action="{{ route('tipo-asistencia.destroy',$tipoAsistencium->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('tipo-asistencia.show',$tipoAsistencium->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('tipo-asistencia.edit',$tipoAsistencium->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('tipo-asistencia.show',$tipoAsistencium->id) }}"><i class="fa fa-fw fa-eye"></i> VER</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('tipo-asistencia.edit',$tipoAsistencium->id) }}"><i class="fa fa-fw fa-edit"></i> EDITAR</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> ELIMINAR</button>
                                                 </form>
                                             </td>
                                         </tr>

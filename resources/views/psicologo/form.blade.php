@@ -1,11 +1,7 @@
 <div class="box box-info padding-1">
     <div class="box-body">
         
-        <div class="form-group">
-            {{ Form::label('idpsicologo') }}
-            {{ Form::text('idpsicologo', $psicologo->idpsicologo, ['class' => 'form-control' . ($errors->has('idpsicologo') ? ' is-invalid' : ''), 'placeholder' => 'Idpsicologo']) }}
-            {!! $errors->first('idpsicologo', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+      
         <div class="form-group">
             {{ Form::label('cui') }}
             {{ Form::text('cui', $psicologo->cui, ['class' => 'form-control' . ($errors->has('cui') ? ' is-invalid' : ''), 'placeholder' => 'Cui']) }}
@@ -38,7 +34,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('fechaNaciemiento') }}
-            {{ Form::text('fechaNaciemiento', $psicologo->fechaNaciemiento, ['class' => 'form-control' . ($errors->has('fechaNaciemiento') ? ' is-invalid' : ''), 'placeholder' => 'Fechanaciemiento']) }}
+            {{ Form::date('fechaNaciemiento', $psicologo->fechaNaciemiento, ['class' => 'form-control' . ($errors->has('fechaNaciemiento') ? ' is-invalid' : ''), 'placeholder' => 'Fechanaciemiento']) }}
             {!! $errors->first('fechaNaciemiento', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

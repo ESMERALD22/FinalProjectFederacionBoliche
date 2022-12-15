@@ -2,7 +2,7 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('nombreFactor') }}
+            {{ Form::label('nombre del Factor') }}
             {{ Form::text('nombreFactor', $factorEmocionalSensorial->nombreFactor, ['class' => 'form-control' . ($errors->has('nombreFactor') ? ' is-invalid' : ''), 'placeholder' => 'Nombrefactor']) }}
             {!! $errors->first('nombreFactor', '<div class="invalid-feedback">:message</div>') !!}
         </div>

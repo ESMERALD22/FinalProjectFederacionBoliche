@@ -17,7 +17,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('psicologos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear psicologo') }}
                                 </a>
                               </div>
                         </div>
@@ -35,19 +35,19 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Idpsicologo</th>
-										<th>Cui</th>
-										<th>Nombre1</th>
-										<th>Nombre2</th>
-										<th>Apellido1</th>
-										<th>Apellido2</th>
-										<th>Apellidodecasada</th>
-										<th>Fechanaciemiento</th>
-										<th>Telefonodecasa</th>
-										<th>Celular</th>
-										<th>Genero</th>
-										<th>Direccion</th>
-										<th>Idmunicipio</th>
+										<th>Id</th>
+										<th>CUI</th>
+										<th>1ER NOMBRE</th>
+										<th>2DO NOMBRE</th>
+										<th>1ER APELLIDO</th>
+										<th>2DO APELLIDO</th>
+										<th>APELLIDO DE CASADA</th>
+										<th>FECHA DE NACIMIENTO</th>
+										<th>TELEFONO DE CASA</th>
+										<th>CELULAR</th>
+										<th>GENERO</th>
+										<th>DIRECCION</th>
+										<th>MUNICIPIO</th>
 
                                         <th></th>
                                     </tr>
@@ -72,9 +72,9 @@
 											<td>{{ $psicologo->idMunicipio }}</td>
 
                                             <td>
-                                                <form action="{{ route('psicologos.destroy',$psicologo->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('psicologos.show',$psicologo->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('psicologos.edit',$psicologo->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                <form action="{{ route('psicologos.destroy',$psicologo->idpsicologo ) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('psicologos.show',$psicologo->idpsicologo ) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('psicologos.edit',$psicologo->idpsicologo ) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>

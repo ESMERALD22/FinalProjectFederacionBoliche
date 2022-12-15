@@ -10,17 +10,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Tipo Asistencium</span>
+                            <span class="card-title">Informacion del tipo de asistencia</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('tipo-asistencia.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('tipo-asistencia.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Tipoasistencia:</strong>
+                            <strong>Tipo de asistencia:</strong>
                             {{ $tipoAsistencium->tipoAsistencia }}
                         </div>
 

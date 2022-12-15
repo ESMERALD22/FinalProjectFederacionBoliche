@@ -116,7 +116,7 @@ class AsignacionAtletumController extends Controller
 
         $asignacionAtletum->update($request->all());
 
-        return redirect()->route('asignacion-atleta.index')
+        return redirect()->route('asignacionAtletum.index')
             ->with('success', 'Asignacion Atleta actualizada');
     }
 

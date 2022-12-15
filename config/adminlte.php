@@ -325,7 +325,7 @@ return [
             ],
         ],
         [
-            'text' => 'Registro de Personal(Datos Personales)',
+            'text' => 'REGISTOR DE PERSONAL(Datos Personales)',
             'url'  => 'admin/settings',
             'icon' => ' fas fa-fw   fa-clipboard-user',
 
@@ -336,7 +336,7 @@ return [
                 ],
                 [
                     'text'    => 'Psicologos',
-                    'url'     => '#',
+                    'url'     => '/psicologos',
                     
                 ],
                 [
@@ -346,7 +346,7 @@ return [
             ],
         ],
         [
-            'text' => 'Administracion',
+            'text' => 'ADMINISTRACION',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
 
@@ -404,7 +404,7 @@ return [
             ],
         ],
         [
-            'text'    => 'Centro Deportivos',
+            'text'    => 'CENTROS DEPORTIVOS',
             'icon'    => 'fas fa-fw fa-user',
             'submenu' => [
                 [
@@ -424,7 +424,7 @@ return [
         ],
 
         [
-            'text' => 'Reportes',
+            'text' => 'REPORTES',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
             'submenu' => [
@@ -456,7 +456,7 @@ return [
         ],
 
         [
-            'text' => 'Anuncios',
+            'text' => 'ANUNCIOS',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
             'submenu' => [
@@ -467,13 +467,13 @@ return [
             ],
         ],
         [
-            'text' => 'Anuncios',
+            'text' => 'NOTA EVOLUTIVA',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
             'submenu' => [
                 [
-                    'text' => 'Atletas',
-                    'url'  => '#',
+                    'text' => 'Factores emocionales sensoriales',
+                    'url'  => '/factor-emocional-sensorials',
                 ],
                 [
                     'text'    => 'Nota evolutiva',
